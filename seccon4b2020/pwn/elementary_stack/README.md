@@ -2,6 +2,7 @@
 Pwn 429pts 18solves  
 
 ## point  
+- OOB(local var)  
 - GOT overwrite  
 - FSA  
 
