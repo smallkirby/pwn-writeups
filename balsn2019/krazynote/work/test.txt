@@ -1,0 +1,644 @@
+/* offset    |  size */  type = struct task_struct {
+/*    0      |    16 */    struct thread_info {
+/*    0      |     8 */        unsigned long flags;
+/*    8      |     4 */        u32 status;
+/* XXX  4-byte padding  */
+
+                               /* total size (bytes):   16 */
+                           } thread_info;
+/*   16      |     8 */    volatile long state;
+/*   24      |     8 */    void *stack;
+/*   32      |     4 */    refcount_t usage;
+/*   36      |     4 */    unsigned int flags;
+/*   40      |     4 */    unsigned int ptrace;
+/* XXX  4-byte hole  */
+/*   48      |     8 */    struct llist_node {
+/*   48      |     8 */        struct llist_node *next;
+
+                               /* total size (bytes):    8 */
+                           } wake_entry;
+/*   56      |     4 */    int on_cpu;
+/*   60      |     4 */    unsigned int cpu;
+/*   64      |     4 */    unsigned int wakee_flips;
+/* XXX  4-byte hole  */
+/*   72      |     8 */    unsigned long wakee_flip_decay_ts;
+/*   80      |     8 */    struct task_struct *last_wakee;
+/*   88      |     4 */    int recent_used_cpu;
+/*   92      |     4 */    int wake_cpu;
+/*   96      |     4 */    int on_rq;
+/*  100      |     4 */    int prio;
+/*  104      |     4 */    int static_prio;
+/*  108      |     4 */    int normal_prio;
+/*  112      |     4 */    unsigned int rt_priority;
+/* XXX  4-byte hole  */
+/*  120      |     8 */    const struct sched_class *sched_class;
+/*  128      |   192 */    struct sched_entity {
+/*  128      |    16 */        struct load_weight {
+/*  128      |     8 */            unsigned long weight;
+/*  136      |     4 */            u32 inv_weight;
+/* XXX  4-byte padding  */
+
+                                   /* total size (bytes):   16 */
+                               } load;
+/*  144      |     8 */        unsigned long runnable_weight;
+/*  152      |    24 */        struct rb_node {
+/*  152      |     8 */            unsigned long __rb_parent_color;
+/*  160      |     8 */            struct rb_node *rb_right;
+/*  168      |     8 */            struct rb_node *rb_left;
+
+                                   /* total size (bytes):   24 */
+                               } run_node;
+/*  176      |    16 */        struct list_head {
+/*  176      |     8 */            struct list_head *next;
+/*  184      |     8 */            struct list_head *prev;
+
+                                   /* total size (bytes):   16 */
+                               } group_node;
+/*  192      |     4 */        unsigned int on_rq;
+/* XXX  4-byte hole  */
+/*  200      |     8 */        u64 exec_start;
+/*  208      |     8 */        u64 sum_exec_runtime;
+/*  216      |     8 */        u64 vruntime;
+/*  224      |     8 */        u64 prev_sum_exec_runtime;
+/*  232      |     8 */        u64 nr_migrations;
+/*  240      |     0 */        struct sched_statistics {
+            <no data fields>
+
+                                   /* total size (bytes):    0 */
+                               } statistics;
+/* XXX 16-byte hole  */
+/*  256      |    64 */        struct sched_avg {
+/*  256      |     8 */            u64 last_update_time;
+/*  264      |     8 */            u64 load_sum;
+/*  272      |     8 */            u64 runnable_load_sum;
+/*  280      |     4 */            u32 util_sum;
+/*  284      |     4 */            u32 period_contrib;
+/*  288      |     8 */            unsigned long load_avg;
+/*  296      |     8 */            unsigned long runnable_load_avg;
+/*  304      |     8 */            unsigned long util_avg;
+/*  312      |     8 */            struct util_est {
+/*  312      |     4 */                unsigned int enqueued;
+/*  316      |     4 */                unsigned int ewma;
+
+                                       /* total size (bytes):    8 */
+                                   } util_est;
+
+                                   /* total size (bytes):   64 */
+                               } avg;
+
+                               /* total size (bytes):  192 */
+                           } se;
+/*  320      |    48 */    struct sched_rt_entity {
+/*  320      |    16 */        struct list_head {
+/*  320      |     8 */            struct list_head *next;
+/*  328      |     8 */            struct list_head *prev;
+
+                                   /* total size (bytes):   16 */
+                               } run_list;
+/*  336      |     8 */        unsigned long timeout;
+/*  344      |     8 */        unsigned long watchdog_stamp;
+/*  352      |     4 */        unsigned int time_slice;
+/*  356      |     2 */        unsigned short on_rq;
+/*  358      |     2 */        unsigned short on_list;
+/*  360      |     8 */        struct sched_rt_entity *back;
+
+                               /* total size (bytes):   48 */
+                           } rt;
+/*  368      |   216 */    struct sched_dl_entity {
+/*  368      |    24 */        struct rb_node {
+/*  368      |     8 */            unsigned long __rb_parent_color;
+/*  376      |     8 */            struct rb_node *rb_right;
+/*  384      |     8 */            struct rb_node *rb_left;
+
+                                   /* total size (bytes):   24 */
+                               } rb_node;
+/*  392      |     8 */        u64 dl_runtime;
+/*  400      |     8 */        u64 dl_deadline;
+/*  408      |     8 */        u64 dl_period;
+/*  416      |     8 */        u64 dl_bw;
+/*  424      |     8 */        u64 dl_density;
+/*  432      |     8 */        s64 runtime;
+/*  440      |     8 */        u64 deadline;
+/*  448      |     4 */        unsigned int flags;
+/*  452: 0   |     4 */        unsigned int dl_throttled : 1;
+/*  452: 1   |     4 */        unsigned int dl_boosted : 1;
+/*  452: 2   |     4 */        unsigned int dl_yielded : 1;
+/*  452: 3   |     4 */        unsigned int dl_non_contending : 1;
+/*  452: 4   |     4 */        unsigned int dl_overrun : 1;
+/* XXX  3-bit hole   */
+/* XXX  3-byte hole  */
+/*  456      |    64 */        struct hrtimer {
+/*  456      |    32 */            struct timerqueue_node {
+/*  456      |    24 */                struct rb_node {
+/*  456      |     8 */                    unsigned long __rb_parent_color;
+/*  464      |     8 */                    struct rb_node *rb_right;
+/*  472      |     8 */                    struct rb_node *rb_left;
+
+                                           /* total size (bytes):   24 */
+                                       } node;
+/*  480      |     8 */                ktime_t expires;
+
+                                       /* total size (bytes):   32 */
+                                   } node;
+/*  488      |     8 */            ktime_t _softexpires;
+/*  496      |     8 */            enum hrtimer_restart (*function)(struct hrtimer *);
+/*  504      |     8 */            struct hrtimer_clock_base *base;
+/*  512      |     1 */            u8 state;
+/*  513      |     1 */            u8 is_rel;
+/*  514      |     1 */            u8 is_soft;
+/* XXX  5-byte padding  */
+
+                                   /* total size (bytes):   64 */
+                               } dl_timer;
+/*  520      |    64 */        struct hrtimer {
+/*  520      |    32 */            struct timerqueue_node {
+/*  520      |    24 */                struct rb_node {
+/*  520      |     8 */                    unsigned long __rb_parent_color;
+/*  528      |     8 */                    struct rb_node *rb_right;
+/*  536      |     8 */                    struct rb_node *rb_left;
+
+                                           /* total size (bytes):   24 */
+                                       } node;
+/*  544      |     8 */                ktime_t expires;
+
+                                       /* total size (bytes):   32 */
+                                   } node;
+/*  552      |     8 */            ktime_t _softexpires;
+/*  560      |     8 */            enum hrtimer_restart (*function)(struct hrtimer *);
+/*  568      |     8 */            struct hrtimer_clock_base *base;
+/*  576      |     1 */            u8 state;
+/*  577      |     1 */            u8 is_rel;
+/*  578      |     1 */            u8 is_soft;
+/* XXX  5-byte padding  */
+
+                                   /* total size (bytes):   64 */
+                               } inactive_timer;
+
+                               /* total size (bytes):  216 */
+                           } dl;
+/*  584      |     4 */    unsigned int policy;
+/*  588      |     4 */    int nr_cpus_allowed;
+/*  592      |     8 */    cpumask_t cpus_allowed;
+/*  600      |     0 */    struct sched_info {
+        <no data fields>
+
+                               /* total size (bytes):    0 */
+                           } sched_info;
+/*  600      |    16 */    struct list_head {
+/*  600      |     8 */        struct list_head *next;
+/*  608      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } tasks;
+/*  616      |    40 */    struct plist_node {
+/*  616      |     4 */        int prio;
+/* XXX  4-byte hole  */
+/*  624      |    16 */        struct list_head {
+/*  624      |     8 */            struct list_head *next;
+/*  632      |     8 */            struct list_head *prev;
+
+                                   /* total size (bytes):   16 */
+                               } prio_list;
+/*  640      |    16 */        struct list_head {
+/*  640      |     8 */            struct list_head *next;
+/*  648      |     8 */            struct list_head *prev;
+
+                                   /* total size (bytes):   16 */
+                               } node_list;
+
+                               /* total size (bytes):   40 */
+                           } pushable_tasks;
+/*  656      |    24 */    struct rb_node {
+/*  656      |     8 */        unsigned long __rb_parent_color;
+/*  664      |     8 */        struct rb_node *rb_right;
+/*  672      |     8 */        struct rb_node *rb_left;
+
+                               /* total size (bytes):   24 */
+                           } pushable_dl_tasks;
+/*  680      |     8 */    struct mm_struct *mm;
+/*  688      |     8 */    struct mm_struct *active_mm;
+/*  696      |    40 */    struct vmacache {
+/*  696      |     8 */        u64 seqnum;
+/*  704      |    32 */        struct vm_area_struct *vmas[4];
+
+                               /* total size (bytes):   40 */
+                           } vmacache;
+/*  736      |    20 */    struct task_rss_stat {
+/*  736      |     4 */        int events;
+/*  740      |    16 */        int count[4];
+
+                               /* total size (bytes):   20 */
+                           } rss_stat;
+/*  756      |     4 */    int exit_state;
+/*  760      |     4 */    int exit_code;
+/*  764      |     4 */    int exit_signal;
+/*  768      |     4 */    int pdeath_signal;
+/* XXX  4-byte hole  */
+/*  776      |     8 */    unsigned long jobctl;
+/*  784      |     4 */    unsigned int personality;
+/*  788: 0   |     4 */    unsigned int sched_reset_on_fork : 1;
+/*  788: 1   |     4 */    unsigned int sched_contributes_to_load : 1;
+/*  788: 2   |     4 */    unsigned int sched_migrated : 1;
+/*  788: 3   |     4 */    unsigned int sched_remote_wakeup : 1;
+/* XXX  4-bit hole   */
+/* XXX  3-byte hole  */
+/*  792: 0   |     4 */    unsigned int in_execve : 1;
+/*  792: 1   |     4 */    unsigned int in_iowait : 1;
+/*  792: 2   |     4 */    unsigned int restore_sigmask : 1;
+/* XXX  5-bit hole   */
+/* XXX  7-byte hole  */
+/*  800      |     8 */    unsigned long atomic_flags;
+/*  808      |    48 */    struct restart_block {
+/*  808      |     8 */        long (*fn)(struct restart_block *);
+/*  816      |    40 */        union {
+/*                40 */            struct {
+/*  816      |     8 */                u32 *uaddr;
+/*  824      |     4 */                u32 val;
+/*  828      |     4 */                u32 flags;
+/*  832      |     4 */                u32 bitset;
+/* XXX  4-byte hole  */
+/*  840      |     8 */                u64 time;
+/*  848      |     8 */                u32 *uaddr2;
+
+                                       /* total size (bytes):   40 */
+                                   } futex;
+/*                24 */            struct {
+/*  816      |     4 */                clockid_t clockid;
+/*  820      |     4 */                enum timespec_type type;
+/*  824      |     8 */                union {
+/*                 8 */                    struct __kernel_timespec *rmtp;
+/*                 8 */                    struct old_timespec32 *compat_rmtp;
+
+                                           /* total size (bytes):    8 */
+                                       };
+/*  832      |     8 */                u64 expires;
+
+                                       /* total size (bytes):   24 */
+                                   } nanosleep;
+/*                32 */            struct {
+/*  816      |     8 */                struct pollfd *ufds;
+/*  824      |     4 */                int nfds;
+/*  828      |     4 */                int has_timeout;
+/*  832      |     8 */                unsigned long tv_sec;
+/*  840      |     8 */                unsigned long tv_nsec;
+
+                                       /* total size (bytes):   32 */
+                                   } poll;
+/* XXX 32-byte padding  */
+
+                                   /* total size (bytes):   40 */
+                               };
+
+                               /* total size (bytes):   48 */
+                           } restart_block;
+/*  856      |     4 */    pid_t pid;
+/*  860      |     4 */    pid_t tgid;
+/*  864      |     8 */    struct task_struct *real_parent;
+/*  872      |     8 */    struct task_struct *parent;
+/*  880      |    16 */    struct list_head {
+/*  880      |     8 */        struct list_head *next;
+/*  888      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } children;
+/*  896      |    16 */    struct list_head {
+/*  896      |     8 */        struct list_head *next;
+/*  904      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } sibling;
+/*  912      |     8 */    struct task_struct *group_leader;
+/*  920      |    16 */    struct list_head {
+/*  920      |     8 */        struct list_head *next;
+/*  928      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } ptraced;
+/*  936      |    16 */    struct list_head {
+/*  936      |     8 */        struct list_head *next;
+/*  944      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } ptrace_entry;
+/*  952      |     8 */    struct pid *thread_pid;
+/*  960      |    64 */    struct hlist_node pid_links[4];
+/* 1024      |    16 */    struct list_head {
+/* 1024      |     8 */        struct list_head *next;
+/* 1032      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } thread_group;
+/* 1040      |    16 */    struct list_head {
+/* 1040      |     8 */        struct list_head *next;
+/* 1048      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } thread_node;
+/* 1056      |     8 */    struct completion *vfork_done;
+/* 1064      |     8 */    int *set_child_tid;
+/* 1072      |     8 */    int *clear_child_tid;
+/* 1080      |     8 */    u64 utime;
+/* 1088      |     8 */    u64 stime;
+/* 1096      |     8 */    u64 gtime;
+/* 1104      |    24 */    struct prev_cputime {
+/* 1104      |     8 */        u64 utime;
+/* 1112      |     8 */        u64 stime;
+/* 1120      |     4 */        raw_spinlock_t lock;
+/* XXX  4-byte padding  */
+
+                               /* total size (bytes):   24 */
+                           } prev_cputime;
+/* 1128      |     8 */    unsigned long nvcsw;
+/* 1136      |     8 */    unsigned long nivcsw;
+/* 1144      |     8 */    u64 start_time;
+/* 1152      |     8 */    u64 real_start_time;
+/* 1160      |     8 */    unsigned long min_flt;
+/* 1168      |     8 */    unsigned long maj_flt;
+/* 1176      |     8 */    const struct cred *ptracer_cred;
+/* 1184      |     8 */    const struct cred *real_cred;
+/* 1192      |     8 */    const struct cred *cred;
+/* 1200      |    16 */    char comm[16];
+/* 1216      |     8 */    struct nameidata *nameidata;
+/* 1224      |     8 */    struct fs_struct *fs;
+/* 1232      |     8 */    struct files_struct *files;
+/* 1240      |     8 */    struct nsproxy *nsproxy;
+/* 1248      |     8 */    struct signal_struct *signal;
+/* 1256      |     8 */    struct sighand_struct *sighand;
+/* 1264      |     8 */    sigset_t blocked;
+/* 1272      |     8 */    sigset_t real_blocked;
+/* 1280      |     8 */    sigset_t saved_sigmask;
+/* 1288      |    24 */    struct sigpending {
+/* 1288      |    16 */        struct list_head {
+/* 1288      |     8 */            struct list_head *next;
+/* 1296      |     8 */            struct list_head *prev;
+
+                                   /* total size (bytes):   16 */
+                               } list;
+/* 1304      |     8 */        sigset_t signal;
+
+                               /* total size (bytes):   24 */
+                           } pending;
+/* 1312      |     8 */    unsigned long sas_ss_sp;
+/* 1320      |     8 */    size_t sas_ss_size;
+/* 1328      |     4 */    unsigned int sas_ss_flags;
+/* XXX  4-byte hole  */
+/* 1336      |     8 */    struct callback_head *task_works;
+/* 1344      |     0 */    struct seccomp {
+        <no data fields>
+
+                               /* total size (bytes):    0 */
+                           } seccomp;
+/* 1344      |     4 */    u32 parent_exec_id;
+/* 1348      |     4 */    u32 self_exec_id;
+/* 1352      |     4 */    spinlock_t alloc_lock;
+/* 1356      |     4 */    raw_spinlock_t pi_lock;
+/* 1360      |     8 */    struct wake_q_node {
+/* 1360      |     8 */        struct wake_q_node *next;
+
+                               /* total size (bytes):    8 */
+                           } wake_q;
+/* 1368      |     8 */    void *journal_info;
+/* 1376      |     8 */    struct bio_list *bio_list;
+/* 1384      |     8 */    struct reclaim_state *reclaim_state;
+/* 1392      |     8 */    struct backing_dev_info *backing_dev_info;
+/* 1400      |     8 */    struct io_context *io_context;
+/* 1408      |     8 */    unsigned long ptrace_message;
+/* 1416      |     8 */    kernel_siginfo_t *last_siginfo;
+/* 1424      |     0 */    struct task_io_accounting {
+        <no data fields>
+
+                               /* total size (bytes):    0 */
+                           } ioac;
+/* 1424      |    16 */    struct perf_event_context *perf_event_ctxp[2];
+/* 1440      |    32 */    struct mutex {
+/* 1440      |     8 */        atomic_long_t owner;
+/* 1448      |     4 */        spinlock_t wait_lock;
+/* 1452      |     4 */        struct optimistic_spin_queue {
+/* 1452      |     4 */            atomic_t tail;
+
+                                   /* total size (bytes):    4 */
+                               } osq;
+/* 1456      |    16 */        struct list_head {
+/* 1456      |     8 */            struct list_head *next;
+/* 1464      |     8 */            struct list_head *prev;
+
+                                   /* total size (bytes):   16 */
+                               } wait_list;
+
+                               /* total size (bytes):   32 */
+                           } perf_event_mutex;
+/* 1472      |    16 */    struct list_head {
+/* 1472      |     8 */        struct list_head *next;
+/* 1480      |     8 */        struct list_head *prev;
+
+                               /* total size (bytes):   16 */
+                           } perf_event_list;
+/* 1488      |    16 */    struct tlbflush_unmap_batch {
+/* 1488      |     8 */        struct arch_tlbflush_unmap_batch {
+/* 1488      |     8 */            struct cpumask {
+/* 1488      |     8 */                unsigned long bits[1];
+
+                                       /* total size (bytes):    8 */
+                                   } cpumask;
+
+                                   /* total size (bytes):    8 */
+                               } arch;
+/* 1496      |     1 */        bool flush_required;
+/* 1497      |     1 */        bool writable;
+/* XXX  6-byte padding  */
+
+                               /* total size (bytes):   16 */
+                           } tlb_ubc;
+/* 1504      |    16 */    struct callback_head {
+/* 1504      |     8 */        struct callback_head *next;
+/* 1512      |     8 */        void (*func)(struct callback_head *);
+
+                               /* total size (bytes):   16 */
+                           } rcu;
+/* 1520      |     8 */    struct pipe_inode_info *splice_pipe;
+/* 1528      |    16 */    struct page_frag {
+/* 1528      |     8 */        struct page *page;
+/* 1536      |     4 */        __u32 offset;
+/* 1540      |     4 */        __u32 size;
+
+                               /* total size (bytes):   16 */
+                           } task_frag;
+/* 1544      |     4 */    int nr_dirtied;
+/* 1548      |     4 */    int nr_dirtied_pause;
+/* 1552      |     8 */    unsigned long dirty_paused_when;
+/* 1560      |     8 */    u64 timer_slack_ns;
+/* 1568      |     8 */    u64 default_timer_slack_ns;
+/* 1576      |     4 */    int pagefault_disabled;
+/* XXX  4-byte hole  */
+/* 1584      |     8 */    struct task_struct *oom_reaper_list;
+/* 1592      |     8 */    struct vm_struct *stack_vm_area;
+/* 1600      |     4 */    refcount_t stack_refcount;
+/* XXX 60-byte hole  */
+/* 1664      |  4352 */    struct thread_struct {
+/* 1664      |    24 */        struct desc_struct tls_array[3];
+/* 1688      |     8 */        unsigned long sp;
+/* 1696      |     2 */        unsigned short es;
+/* 1698      |     2 */        unsigned short ds;
+/* 1700      |     2 */        unsigned short fsindex;
+/* 1702      |     2 */        unsigned short gsindex;
+/* 1704      |     8 */        unsigned long fsbase;
+/* 1712      |     8 */        unsigned long gsbase;
+/* 1720      |    32 */        struct perf_event *ptrace_bps[4];
+/* 1752      |     8 */        unsigned long debugreg6;
+/* 1760      |     8 */        unsigned long ptrace_dr7;
+/* 1768      |     8 */        unsigned long cr2;
+/* 1776      |     8 */        unsigned long trap_nr;
+/* 1784      |     8 */        unsigned long error_code;
+/* 1792      |     8 */        unsigned long *io_bitmap_ptr;
+/* 1800      |     8 */        unsigned long iopl;
+/* 1808      |     4 */        unsigned int io_bitmap_max;
+/* XXX  4-byte hole  */
+/* 1816      |     8 */        mm_segment_t addr_limit;
+/* 1824: 0   |     4 */        unsigned int sig_on_uaccess_err : 1;
+/* 1824: 1   |     4 */        unsigned int uaccess_err : 1;
+/* XXX  6-bit hole   */
+/* XXX 31-byte hole  */
+/* 1856      |  4160 */        struct fpu {
+/* 1856      |     4 */            unsigned int last_cpu;
+/* 1860      |     1 */            unsigned char initialized;
+/* XXX  3-byte hole  */
+/* 1864      |     8 */            unsigned long avx512_timestamp;
+/* XXX 48-byte hole  */
+/* 1920      |  4096 */            union fpregs_state {
+/*               112 */                struct fregs_state {
+/* 1920      |     4 */                    u32 cwd;
+/* 1924      |     4 */                    u32 swd;
+/* 1928      |     4 */                    u32 twd;
+/* 1932      |     4 */                    u32 fip;
+/* 1936      |     4 */                    u32 fcs;
+/* 1940      |     4 */                    u32 foo;
+/* 1944      |     4 */                    u32 fos;
+/* 1948      |    80 */                    u32 st_space[20];
+/* 2028      |     4 */                    u32 status;
+
+                                           /* total size (bytes):  112 */
+                                       } fsave;
+/*               512 */                struct fxregs_state {
+/* 1920      |     2 */                    u16 cwd;
+/* 1922      |     2 */                    u16 swd;
+/* 1924      |     2 */                    u16 twd;
+/* 1926      |     2 */                    u16 fop;
+/* 1928      |    16 */                    union {
+/*                16 */                        struct {
+/* 1928      |     8 */                            u64 rip;
+/* 1936      |     8 */                            u64 rdp;
+
+                                                   /* total size (bytes):   16 */
+                                               };
+/*                16 */                        struct {
+/* 1928      |     4 */                            u32 fip;
+/* 1932      |     4 */                            u32 fcs;
+/* 1936      |     4 */                            u32 foo;
+/* 1940      |     4 */                            u32 fos;
+
+                                                   /* total size (bytes):   16 */
+                                               };
+/* XXX  8-byte padding  */
+
+                                               /* total size (bytes):   16 */
+                                           };
+/* 1944      |     4 */                    u32 mxcsr;
+/* 1948      |     4 */                    u32 mxcsr_mask;
+/* 1952      |   128 */                    u32 st_space[32];
+/* 2080      |   256 */                    u32 xmm_space[64];
+/* 2336      |    48 */                    u32 padding[12];
+/* 2384      |    48 */                    union {
+/*                48 */                        u32 padding1[12];
+/*                48 */                        u32 sw_reserved[12];
+
+                                               /* total size (bytes):   48 */
+                                           };
+
+                                           /* total size (bytes):  512 */
+                                       } fxsave;
+/*               136 */                struct swregs_state {
+/* 1920      |     4 */                    u32 cwd;
+/* 1924      |     4 */                    u32 swd;
+/* 1928      |     4 */                    u32 twd;
+/* 1932      |     4 */                    u32 fip;
+/* 1936      |     4 */                    u32 fcs;
+/* 1940      |     4 */                    u32 foo;
+/* 1944      |     4 */                    u32 fos;
+/* 1948      |    80 */                    u32 st_space[20];
+/* 2028      |     1 */                    u8 ftop;
+/* 2029      |     1 */                    u8 changed;
+/* 2030      |     1 */                    u8 lookahead;
+/* 2031      |     1 */                    u8 no_update;
+/* 2032      |     1 */                    u8 rm;
+/* 2033      |     1 */                    u8 alimit;
+/* XXX  6-byte hole  */
+/* 2040      |     8 */                    struct math_emu_info *info;
+/* 2048      |     4 */                    u32 entry_eip;
+/* XXX  4-byte padding  */
+
+                                           /* total size (bytes):  136 */
+                                       } soft;
+/*               576 */                struct xregs_state {
+/* 1920      |   512 */                    struct fxregs_state {
+/* 1920      |     2 */                        u16 cwd;
+/* 1922      |     2 */                        u16 swd;
+/* 1924      |     2 */                        u16 twd;
+/* 1926      |     2 */                        u16 fop;
+/* 1928      |    16 */                        union {
+/*                16 */                            struct {
+/* 1928      |     8 */                                u64 rip;
+/* 1936      |     8 */                                u64 rdp;
+
+                                                       /* total size (bytes):   16 */
+                                                   };
+/*                16 */                            struct {
+/* 1928      |     4 */                                u32 fip;
+/* 1932      |     4 */                                u32 fcs;
+/* 1936      |     4 */                                u32 foo;
+/* 1940      |     4 */                                u32 fos;
+
+                                                       /* total size (bytes):   16 */
+                                                   };
+/* XXX  8-byte padding  */
+
+                                                   /* total size (bytes):   16 */
+                                               };
+/* 1944      |     4 */                        u32 mxcsr;
+/* 1948      |     4 */                        u32 mxcsr_mask;
+/* 1952      |   128 */                        u32 st_space[32];
+/* 2080      |   256 */                        u32 xmm_space[64];
+/* 2336      |    48 */                        u32 padding[12];
+/* 2384      |    48 */                        union {
+/*                48 */                            u32 padding1[12];
+/*                48 */                            u32 sw_reserved[12];
+
+                                                   /* total size (bytes):   48 */
+                                               };
+
+                                               /* total size (bytes):  512 */
+                                           } i387;
+/* 2432      |    64 */                    struct xstate_header {
+/* 2432      |     8 */                        u64 xfeatures;
+/* 2440      |     8 */                        u64 xcomp_bv;
+/* 2448      |    48 */                        u64 reserved[6];
+
+                                               /* total size (bytes):   64 */
+                                           } header;
+/* 2496      |     0 */                    u8 extended_state_area[0];
+
+                                           /* total size (bytes):  576 */
+                                       } xsave;
+/*              4096 */                u8 __padding[4096];
+/* XXX 4032-byte padding  */
+
+                                       /* total size (bytes): 4096 */
+                                   } state;
+
+                                   /* total size (bytes): 4160 */
+                               } fpu;
+
+                               /* total size (bytes): 4352 */
+                           } thread;
+
+                           /* total size (bytes): 6016 */
+                         }
