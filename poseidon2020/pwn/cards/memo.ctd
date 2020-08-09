@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<cherrytree>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="cards" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596955140.22" ts_lastsave="1596955141.55" unique_id="1">
+		<rich_text>poseidon ctf 2020
+</rich_text>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="seccomp" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596955151.05" ts_lastsave="1596956086.35" unique_id="2">
+			<rich_text> line  CODE  JT   JF      K
+=================================
+ 0000: 0x20 0x00 0x00 0x00000004  A = arch
+ 0001: 0x15 0x01 0x00 0xc000003e  if (A == ARCH_X86_64) goto 0003
+ 0002: 0x06 0x00 0x00 0x00000000  return KILL
+ 0003: 0x20 0x00 0x00 0x00000000  A = sys_number
+ 0004: 0x15 0x00 0x01 0x00000000  if (A != read) goto 0006
+ 0005: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0006: 0x15 0x00 0x01 0x00000001  if (A != write) goto 0008
+ 0007: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0008: 0x15 0x00 0x01 0x00000002  if (A != open) goto 0010
+ 0009: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0010: 0x15 0x00 0x01 0x0000000a  if (A != mprotect) goto 0012
+ 0011: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0012: 0x15 0x00 0x01 0x0000000f  if (A != rt_sigreturn) goto 0014
+ 0013: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0014: 0x15 0x00 0x01 0x0000000c  if (A != brk) goto 0016
+ 0015: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0016: 0x15 0x00 0x01 0x0000003c  if (A != exit) goto 0018
+ 0017: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0018: 0x15 0x00 0x01 0x000000e7  if (A != exit_group) goto 0020
+ 0019: 0x06 0x00 0x00 0x7fff0000  return ALLOW
+ 0020: 0x06 0x00 0x00 0x00000000  return KILL
+
+加えて SET_NO_NEW_PRIV がセットされている?
+</rich_text>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="general" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596956086.35" ts_lastsave="1596956192.73" unique_id="3">
+			<rich_text>
+謎の隠しコマンド: 6=secret nameがある
+スタック上に直read NULL終端なし。スタックサイズぴったり(canaryの真上)</rich_text>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="interesting" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596956192.73" ts_lastsave="1596958338.18" unique_id="4">
+			<rich_text>
+- 謎コマンド6
+
+- add()において、　hoge&gt;8だとprintfして速攻exit(9999)
+
+- remove()において、インデックスの判定が甘い? (1個しかない時にidx=1が通る)
+== やっぱりセグフォした
+
+- remove()において、free()すべきものの順序が真逆
+
+- edit() においてノートの構造体ではなくsize_infosの情報を参照している
+</rich_text>
+		</node>
+	</node>
+</cherrytree>
