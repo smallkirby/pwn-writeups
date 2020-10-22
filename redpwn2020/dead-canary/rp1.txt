@@ -1,0 +1,41 @@
+Trying to open './dead-canary'..
+Loading ELF information..
+FileFormat: Elf, Arch: Ia64
+Using the Nasm syntax..
+
+Wait a few seconds, rp++ is looking for gadgets..
+in LOAD
+57 found.
+
+A total of 57 gadgets found.
+You decided to keep only the unique ones, 29 unique gadgets found.
+[91m0x004006ae[0m: [92madc byte [rax+0x00], ah ; jmp rax ;  (2 found)
+[0m[91m0x0040067f[0m: [92madd bl, dh ; ret  ;  (3 found)
+[0m[91m0x0040067e[0m: [92madd byte [rax], al ; rep ret  ;  (3 found)
+[0m[91m0x0040067d[0m: [92madd byte [rax], r8L ; rep ret  ;  (2 found)
+[0m[91m0x004005d3[0m: [92madd esp, 0x08 ; ret  ;  (2 found)
+[0m[91m0x004005d2[0m: [92madd rsp, 0x08 ; ret  ;  (2 found)
+[0m[91m0x004008c9[0m: [92mcall qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x0040086d[0m: [92mcall qword [rax+0x2E66C3C9] ;  (1 found)
+[0m[91m0x004008ca[0m: [92mcall qword [rsp+rbx*8] ;  (1 found)
+[0m[91m0x004005d0[0m: [92mcall rax ;  (1 found)
+[0m[91m0x004007f9[0m: [92mdec ecx ; ret  ;  (1 found)
+[0m[91m0x004008cc[0m: [92mfmul qword [rax-0x7D] ; ret  ;  (1 found)
+[0m[91m0x00400a3b[0m: [92mjmp qword [rbp+0x00] ;  (1 found)
+[0m[91m0x004006b1[0m: [92mjmp rax ;  (2 found)
+[0m[91m0x0040095b[0m: [92mjmp rsp ;  (1 found)
+[0m[91m0x004007fa[0m: [92mleave  ; ret  ;  (2 found)
+[0m[91m0x004006ac[0m: [92mmov edi, 0x00601058 ; jmp rax ;  (2 found)
+[0m[91m0x004008c7[0m: [92mmov edi, ebp ; call qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x004008c6[0m: [92mmov edi, r13d ; call qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x004008e7[0m: [92mnop dword [rax+rax+0x00000000] ; rep ret  ;  (2 found)
+[0m[91m0x0040067b[0m: [92mnop dword [rax+rax+0x00] ; rep ret  ;  (2 found)
+[0m[91m0x004008e6[0m: [92mnop word [rax+rax+0x00000000] ; rep ret  ;  (1 found)
+[0m[91m0x004008c8[0m: [92mout dx, eax ; call qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x004008e2[0m: [92mpop r15 ; ret  ;  (1 found)
+[0m[91m0x004006b8[0m: [92mpop rbp ; ret  ;  (3 found)
+[0m[91m0x004008e3[0m: [92mpop rdi ; ret  ;  (1 found)
+[0m[91m0x00400680[0m: [92mrep ret  ;  (3 found)
+[0m[91m0x004005d6[0m: [92mret  ;  (12 found)
+[0m[91m0x004008c5[0m: [92mtest byte [rcx+rcx*4-0x11], 0x00000041 ; call qword [rsp+rbx*8] ;  (1 found)
+[0m

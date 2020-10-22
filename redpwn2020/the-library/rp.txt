@@ -1,0 +1,3 @@
+Trying to open './the-library'..
+Loading ELF information..
+FileFormat: Elf, Arch: Ia64
