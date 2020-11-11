@@ -1,0 +1,9 @@
+** IN DECOMPILED CODE **
+sha256: 01d35e9084f6997d363423b897c0dee423252557b591ed89afccda1c4fd8cd22
+compiler_spec: gcc
+import_api_count: 36
+language: x86:LE:32:default
+defined_data_count: 0
+name: right_spot
+function_count: 202
+************************

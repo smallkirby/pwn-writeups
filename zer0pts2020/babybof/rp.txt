@@ -1,0 +1,3 @@
+Trying to open './chall'..
+Loading ELF information..
+FileFormat: Elf, Arch: Ia64

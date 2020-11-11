@@ -1,0 +1,10 @@
+#!/bin/bash
+BIN=$1
+if [[ $# -gt 1 ]];
+then
+  PORT=$2
+else
+  PORT=12300
+fi
+
+socat -v tcp-listen:$PORT,fork,reuseaddr exec:$BIN

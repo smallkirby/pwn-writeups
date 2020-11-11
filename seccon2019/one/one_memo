@@ -1,0 +1,57 @@
+pwndbg> bin
+tcachebins
+0x50 [  1]: 0x561a1b4052b0 ◂— 0x0
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x0
+smallbins
+empty
+largebins
+empty
+pwndbg> heap
+0x561a1b404000 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 593, 
+  fd = 0x1000000, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+0x561a1b404250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 4113, 
+  fd = 0x5959595959595959, 
+  bk = 0x424242424242420a, 
+  fd_nextsize = 0x4242424242424242, 
+  bk_nextsize = 0x4242424242424242
+}
+0x561a1b405260 FASTBIN {
+  mchunk_prev_size = 0, 
+  mchunk_size = 81, 
+  fd = 0x5959595959595959, 
+  bk = 0x4242424242420000, 
+  fd_nextsize = 0x4242424242424242, 
+  bk_nextsize = 0x4242424242424242
+}
+0x561a1b4052b0 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 130385, 
+  fd = 0x0, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+pwndbg> x/10gx 0x561a1b4052b0
+0x561a1b4052b0:	0x0000000000000000	0x000000000001fd51
+0x561a1b4052c0:	0x0000000000000000	0x0000000000000000
+0x561a1b4052d0:	0x0000000000000000	0x0000000000000000
+0x561a1b4052e0:	0x0000000000000000	0x0000000000000000
+0x561a1b4052f0:	0x0000000000000000	0x0000000000000000
+

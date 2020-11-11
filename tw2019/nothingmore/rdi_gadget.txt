@@ -1,0 +1,50 @@
+Trying to open './warmup'..
+Loading ELF information..
+FileFormat: Elf, Arch: Ia64
+Using the Nasm syntax..
+
+Wait a few seconds, rp++ is looking for gadgets..
+in LOAD
+66 found.
+
+in STACK
+0 found.
+
+A total of 66 gadgets found.
+You decided to keep only the unique ones, 35 unique gadgets found.
+[91m0x004005ee[0m: [92madc byte [rax+0x00], ah ; jmp rax ;  (2 found)
+[0m[91m0x004005ed[0m: [92madc byte [rax+0x00], spl ; jmp rax ;  (2 found)
+[0m[91m0x004005bf[0m: [92madd bl, dh ; ret  ;  (3 found)
+[0m[91m0x004005be[0m: [92madd byte [rax], al ; rep ret  ;  (3 found)
+[0m[91m0x004005bd[0m: [92madd byte [rax], r8L ; rep ret  ;  (2 found)
+[0m[91m0x00400707[0m: [92madd cl, cl ; ret  ;  (1 found)
+[0m[91m0x0040053b[0m: [92madd esp, 0x08 ; ret  ;  (2 found)
+[0m[91m0x0040053a[0m: [92madd rsp, 0x08 ; ret  ;  (2 found)
+[0m[91m0x00400759[0m: [92mcall qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x00400a3b[0m: [92mcall qword [rax+0x00] ;  (2 found)
+[0m[91m0x004009cf[0m: [92mcall qword [rax+0x01] ;  (1 found)
+[0m[91m0x004006b6[0m: [92mcall qword [rax+0x4855C35D] ;  (1 found)
+[0m[91m0x0040075a[0m: [92mcall qword [rsp+rbx*8] ;  (1 found)
+[0m[91m0x00400538[0m: [92mcall rax ;  (1 found)
+[0m[91m0x0040075c[0m: [92mfmul qword [rax-0x7D] ; ret  ;  (1 found)
+[0m[91m0x0040099f[0m: [92mjmp qword [rax+0x00000000] ;  (1 found)
+[0m[91m0x004009a7[0m: [92mjmp qword [rax+0x00] ;  (1 found)
+[0m[91m0x00400aa3[0m: [92mjmp qword [rbp+0x00] ;  (1 found)
+[0m[91m0x004005f1[0m: [92mjmp rax ;  (2 found)
+[0m[91m0x00400708[0m: [92mleave  ; ret  ;  (1 found)
+[0m[91m0x004005ec[0m: [92mmov edi, 0x00601048 ; jmp rax ;  (2 found)
+[0m[91m0x00400757[0m: [92mmov edi, ebp ; call qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x00400756[0m: [92mmov edi, r13d ; call qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x00400777[0m: [92mnop dword [rax+rax+0x00000000] ; rep ret  ;  (2 found)
+[0m[91m0x004005bb[0m: [92mnop dword [rax+rax+0x00] ; rep ret  ;  (2 found)
+[0m[91m0x00400776[0m: [92mnop word [rax+rax+0x00000000] ; rep ret  ;  (1 found)
+[0m[91m0x00400758[0m: [92mout dx, eax ; call qword [r12+rbx*8] ;  (1 found)
+[0m[91m0x00400772[0m: [92mpop r15 ; ret  ;  (1 found)
+[0m[91m0x004005f8[0m: [92mpop rbp ; ret  ;  (4 found)
+[0m[91m0x00400773[0m: [92mpop rdi ; ret  ;  (1 found)
+[0m[91m0x004005c0[0m: [92mrep ret  ;  (3 found)
+[0m[91m0x0040053e[0m: [92mret  ;  (12 found)
+[0m[91m0x004006d2[0m: [92mretn 0x0000 ;  (1 found)
+[0m[91m0x00400542[0m: [92mretn 0x200A ;  (2 found)
+[0m[91m0x00400755[0m: [92mtest byte [rcx+rcx*4-0x11], 0x00000041 ; call qword [rsp+rbx*8] ;  (1 found)
+[0m

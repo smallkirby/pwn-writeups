@@ -1,0 +1,6 @@
+small:  1<=size<=0x7F
+mid:    0x20<=size<=0xC7
+big:    0xc9<=size<=0xF9F
+
+secret: 1337
+ptr1==ptr2(!=NULL)だとflag.txtを呼んでくれる

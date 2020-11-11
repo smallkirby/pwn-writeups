@@ -1,0 +1,3 @@
+# 0CTF/TCTF 2020 Quals  
+
+Period: 2020.06.27 AM11:00 ~ 2020.06.29 AM11:00 JST 

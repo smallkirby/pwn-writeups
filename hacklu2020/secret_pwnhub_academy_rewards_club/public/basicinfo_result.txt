@@ -1,0 +1,9 @@
+** IN DECOMPILED CODE **
+sha256: f41996add5121c8998545ba6c6bb754573ec2295778e214873245cc179cb1b1e
+compiler_spec: default
+import_api_count: 0
+language: sparc:BE:32:default
+defined_data_count: 4
+name: sparc-1
+function_count: 167
+************************

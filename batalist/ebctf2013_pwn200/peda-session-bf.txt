@@ -1,0 +1,3 @@
+break *0x804860c
+break *0x80488a7
+

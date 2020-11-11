@@ -1,0 +1,22 @@
+[!] FOUND!: flag
+[!] FOUND!: cat
+[!] FOUND!: exec
+***** IN MEMORY ********
+[!] FOUND!: cat
+[!] FOUND!: cat
+[!] FOUND!: cat
+[!] FOUND!: cat
+[!] FOUND!: exec
+[!] FOUND!: exec
+[!] FOUND!: system
+[!] FOUND!: system
+[!] FOUND!: system
+[!] FOUND!: system
+************************
+***** VULN FUNCS *******
+[!] FOUND!: read is called at 00010354
+[!] FOUND!: read is called at 00010384
+[!] FOUND!: strcat is called at 00017838
+[!] FOUND!: strcat is called at 00017844
+[!] FOUND!: strcpy is called at 000178ac
+************************

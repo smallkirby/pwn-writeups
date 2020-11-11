@@ -1,0 +1,20 @@
+Trying to open './chall'..
+Loading ELF information..
+FileFormat: Elf, Arch: Ia64
+Using the Nasm syntax..
+
+Wait a few seconds, rp++ is looking for gadgets..
+in LOAD
+11 found.
+
+A total of 11 gadgets found.
+You decided to keep only the unique ones, 8 unique gadgets found.
+[91m0x0040043e[0m: [92mcall qword [rbp+0x48] ;  (1 found)
+[0m[91m0x00400498[0m: [92mdec ecx ; ret  ;  (1 found)
+[0m[91m0x00400499[0m: [92mleave  ; ret  ;  (1 found)
+[0m[91m0x0040049b[0m: [92mpop r15 ; ret  ;  (1 found)
+[0m[91m0x0040047c[0m: [92mpop rbp ; ret  ;  (1 found)
+[0m[91m0x0040049c[0m: [92mpop rdi ; ret  ;  (1 found)
+[0m[91m0x0040049e[0m: [92mpop rsi ; ret  ;  (1 found)
+[0m[91m0x0040047d[0m: [92mret  ;  (4 found)
+[0m

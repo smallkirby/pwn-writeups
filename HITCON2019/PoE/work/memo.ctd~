@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<cherrytree>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="PoE" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1597752913.43" ts_lastsave="1597752932.47" unique_id="1">
+		<rich_text scale="h1">PoE HITCON quals 2019</rich_text>
+		<rich_text>
+</rich_text>
+		<rich_text link="webs https://github.com/david942j/ctf-writeups/tree/master/hitcon-quals-2019/PoE/release">https://github.com/david942j/ctf-writeups/tree/master/hitcon-quals-2019/PoE/release</rich_text>
+		<rich_text>
+</rich_text>
+		<rich_text link="webs https://david942j.blogspot.com/2019/10/official-write-up-hitcon-ctf-quals-2019.html">https://david942j.blogspot.com/2019/10/official-write-up-hitcon-ctf-quals-2019.html</rich_text>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="Luna" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1597752941.98" ts_lastsave="1597753014.78" unique_id="2">
+			<rich_text scale="h1">PoE 1
+20 teams solved</rich_text>
+			<rich_text>: 284pts
+</rich_text>
+		</node>
+	</node>
+</cherrytree>

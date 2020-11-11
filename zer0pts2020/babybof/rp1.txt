@@ -1,0 +1,2 @@
+rp++: option "-r" requires an argument
+Try './rp++ --help' for more information.

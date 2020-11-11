@@ -1,0 +1,12 @@
+#!/bin/sh
+basedir=$(dirname "$0")
+timeout --foreground 60 qemu-system-s390x \
+#    -cpu max \
+    -cpu host \
+#    -smp 1 \
+    -m 128 \
+    -kernel "$basedir/vmlinux" \
+    -initrd "$basedir/initramfs.cpio.xz" \
+    -nographic
+#    -nographic \
+#    "$@"

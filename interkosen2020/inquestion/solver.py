@@ -1,0 +1,11 @@
+from pwn import *
+
+enc = b"\xdb\xe2\xeb\xf7\xd6\xed\xeb\xc5\xe8\xa2\xab\xee\xd8\xc1\xae\xb7\xc4\xc5\xf1\xb0\xab\xc1\xd0\xbe\xe7\xba\xd6\xce\xeb\x9f"
+res = b"\x00"
+length = len(enc)
+
+for i in range(length)[::-1]:
+    print(i)
+    res = (res[0] ^ enc[i] ^ ((i) ^ 0xff)).to_bytes(1,"little") + res
+
+print(res)

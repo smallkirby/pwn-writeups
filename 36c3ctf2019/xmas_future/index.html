@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>xmas present brought to you by hxp 36C3 CTF</title>
+
+    <style>
+      body {
+        background: #0d0208;
+        color: #eee;
+        font-family: 'Open Sans', 'Arial';
+        margin: 0;
+      }
+      h1 {
+        margin-bottom: 0;
+      }
+      img {
+        vertical-align: middle;
+        height: 20px;
+      }
+      input {
+        border: 3px solid #008f11;
+        outline: none;
+        border-radius: 15px;
+        background-color: #eee;
+        height: 30px;
+        font-size: 20px;
+        padding: 5px;
+        text-align: center;
+      }
+      button {
+        margin-top: 10px;
+        border: 3px solid #008f11;
+        border-radius: 10px;
+        background-color: #0d0208;
+        color: #00ff41;
+        outline: none;
+        padding: 7px 15px;
+        font-size: 20px;
+      }
+      canvas {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+      #container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #inner-container {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        background-image: radial-gradient(
+          ellipse closest-side at center,
+          rgba(0, 0, 0, 0.8) 60%,
+          transparent 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+
+    <div id="container">
+      <div id="inner-container">
+        <h1>High-speed flag checking</h1>
+        <h3>Powered by Rust <img src="./ferris.svg" /> and WASM <img src="./wasm.svg" /></h3>
+
+        <form id="form">
+          <input type="text" id="flag" placeholder="hxp{...}" size="50" /><br />
+          <button type="submit">Check</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module">
+      import init, { check } from './hxp2019.js';
+
+      async function run() {
+        await init();
+
+        document.getElementById('form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const flag = document.getElementById('flag').value;
+          if (check(flag)) {
+            alert('Yes, you found the flag!');
+          } else {
+            alert('Nope.');
+          }
+        });
+      }
+
+      run();
+    </script>
+
+    <script>
+      var canvas = document.getElementById('canvas1'),
+        ctx = canvas.getContext('2d'),
+        canvas2 = document.getElementById('canvas2'),
+        ctx2 = canvas2.getContext('2d'),
+        cw = window.innerWidth,
+        ch = window.innerHeight,
+        charArr = [
+          'a',
+          'b',
+          'c',
+          'd',
+          'e',
+          'f',
+          'g',
+          'h',
+          'i',
+          'j',
+          'k',
+          'l',
+          'm',
+          'n',
+          'o',
+          'p',
+          'q',
+          'r',
+          's',
+          't',
+          'u',
+          'v',
+          'w',
+          'x',
+          'y',
+          'z',
+        ],
+        fallingCharArr = [],
+        fontSize = 10,
+        maxColums = cw / fontSize;
+      canvas.width = canvas2.width = cw;
+      canvas.height = canvas2.height = ch;
+
+      function randomInt(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+
+      function randomFloat(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      function Point(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+
+      Point.prototype.draw = function(ctx) {
+        this.value = charArr[randomInt(0, charArr.length - 1)].toUpperCase();
+        this.speed = randomFloat(1, 5);
+
+        ctx2.fillStyle = 'rgba(255,255,255,0.8)';
+        ctx2.font = fontSize + 'px san-serif';
+        ctx2.fillText(this.value, this.x, this.y);
+
+        ctx.fillStyle = '#0F0';
+        ctx.font = fontSize + 'px san-serif';
+        ctx.fillText(this.value, this.x, this.y);
+
+        this.y += this.speed;
+        if (this.y > ch) {
+          this.y = randomFloat(-100, 0);
+          this.speed = randomFloat(2, 5);
+        }
+      };
+
+      for (var i = 0; i < maxColums; i++) {
+        fallingCharArr.push(new Point(i * fontSize, randomFloat(-ch, 0)));
+      }
+
+      function update() {
+        ctx.fillStyle = 'rgba(0,0,0,0.05)';
+        ctx.fillRect(0, 0, cw, ch);
+        ctx2.clearRect(0, 0, cw, ch);
+
+        var i = fallingCharArr.length;
+
+        while (i--) {
+          fallingCharArr[i].draw(ctx);
+        }
+
+        requestAnimationFrame(update);
+      }
+
+      update();
+    </script>
+  </body>
+</html>

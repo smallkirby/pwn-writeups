@@ -1,0 +1,94 @@
+2020-10-24 00:58:30 INFO  (LoggingInitialization) Using log config file: jar:file:/usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2020-10-24 00:58:30 INFO  (LoggingInitialization) Using log file: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/anylisis_log.txt  
+2020-10-24 00:58:30 INFO  (Preferences) Loading user preferences: /home/wataru/.ghidra/.ghidra_9.1.2_PUBLIC/preferences  
+2020-10-24 00:58:31 INFO  (ClassSearcher) Class search complete (764 ms)  
+2020-10-24 00:58:31 INFO  (SSLContextInitializer) Initializing SSL Context  
+2020-10-24 00:58:31 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2020-10-24 00:58:31 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2020-10-24 00:58:31 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2020-10-24 00:58:31 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/wataru/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/Ghidra-Cpp-Class-Analyzer/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/gotools/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts  
+2020-10-24 00:58:31 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2020-10-24 00:58:31 INFO  (HeadlessAnalyzer) Creating project: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/ghidra  
+2020-10-24 00:58:31 INFO  (DefaultProject) Creating project: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/ghidra  
+2020-10-24 00:58:31 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2020-10-24 00:58:31 INFO  (HeadlessAnalyzer)      project: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/ghidra  
+2020-10-24 00:58:31 INFO  (HeadlessAnalyzer) IMPORTING: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/./sparc-1  
+2020-10-24 00:58:32 DEBUG (ElfHeader$$EnhancerByCGLIB$$d163a884) Elf symbol table section .symtab linked to string table section .strtab  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .data at 0002e110 from file offset 57616  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .got at 0002e000 from file offset 57344  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .data.rel.ro at 0002dfd0 from file offset 57296  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .dtors at 0002dfc8 from file offset 57288  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .ctors at 0002dfc0 from file offset 57280  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .eh_frame at 0001da98 from file offset 55960  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .rodata at 0001c680 from file offset 50816  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .fini at 0001c668 from file offset 50792  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .text at 000100f0 from file offset 240  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .init at 000100d4 from file offset 212  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block segment_0.1 at 00010000 from file offset 0  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block segment_0.5 at 0001c67c from file offset 50812  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .shstrtab at OTHER:00000000 from file offset 70439  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .strtab at OTHER:00000000 from file offset 65244  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .symtab at OTHER:00000000 from file offset 57996  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .gnu.attributes at OTHER:00000000 from file offset 57977  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Loading block .comment at OTHER:00000000 from file offset 57944  
+2020-10-24 00:58:32 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0001c67c  
+2020-10-24 00:58:33 DEBUG (ElfProgramBuilder) Loading block _elfSectionHeaders at OTHER:00000000 from file offset 70576  
+2020-10-24 00:58:33 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "sparc:BE:32:default" and cspec "default" for file: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/./sparc-1  
+2020-10-24 00:58:33 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/./sparc-1  
+2020-10-24 00:58:33 DEBUG (ElfHeader$$EnhancerByCGLIB$$d163a884) Elf symbol table section .symtab linked to string table section .strtab  
+2020-10-24 00:58:37 INFO  (PackedDatabaseCache) Packed database cache: /tmp/wataru-Ghidra/packed-db-cache  
+2020-10-24 00:58:37 DEBUG (PackedDatabaseCache) Caching packed database: /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib.gdt  
+2020-10-24 00:58:37 DEBUG (PackedDatabase) Unpacking database /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib.gdt -> /tmp/wataru-Ghidra/packed-db-cache/pdbC7E08886/db.1.gbf  
+2020-10-24 00:58:37 DEBUG (PackedDatabaseCache) Cache update completed: /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib.gdt  
+2020-10-24 00:58:38 INFO  (ApplyFunctionDataTypesCmd) Multiple function definitions for fn at 00010318 found.  No function signature applied.  
+2020-10-24 00:58:38 INFO  (ApplyFunctionDataTypesCmd) Multiple function definitions for __sigsetjmp at 00018904 found.  No function signature applied.  
+2020-10-24 00:58:42 INFO  (AutoAnalysisManager) GCC RTTI Analyzer> RTTI not detected
+  
+2020-10-24 00:58:42 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.394 secs
+    Apply Data Archives                        0.507 secs
+    Call Convention Identification             2.334 secs
+    Call-Fixup Installer                       0.007 secs
+    Create Address Tables                      0.029 secs
+    Create Function                            0.002 secs
+    DWARF                                      0.014 secs
+    Data Reference                             0.015 secs
+    Decompiler Switch Analysis                 1.563 secs
+    Demangler                                  0.025 secs
+    Disassemble Entry Points                   1.048 secs
+    Embedded Media                             0.057 secs
+    External Entry References                  0.002 secs
+    Function Start Search                      0.061 secs
+    GCC C++ Class Analyzer                     0.001 secs
+    GCC Exception Handlers                     0.039 secs
+    GCC RTTI Analyzer                          0.003 secs
+    Non-Returning Functions - Discovered       0.078 secs
+    Non-Returning Functions - Known            0.006 secs
+    Reference                                  0.026 secs
+    Shared Return Calls                        0.014 secs
+    Sparc Constant Reference Analyzer          1.279 secs
+    Stack                                      1.582 secs
+    Subroutine References                      0.016 secs
+-----------------------------------------------------
+     Total Time   9 secs
+-----------------------------------------------------
+  
+2020-10-24 00:58:42 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/./sparc-1  
+2020-10-24 00:58:42 INFO  (HeadlessAnalyzer) SCRIPT: /home/wataru/ghidra_scripts/preanalysis_headless.py  
+2020-10-24 00:58:52 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/./sparc-1  
+2020-10-24 00:58:52 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /home/wataru/Documents/ctf/hacklu2020/secret_pwnhub_academy_rewards_club/public/./sparc-1  
+2020-10-24 00:58:52 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /sparc-1  

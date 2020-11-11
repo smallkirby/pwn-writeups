@@ -1,0 +1,60 @@
+Trying to open './aerofloat'..
+Loading ELF information..
+FileFormat: Elf, Arch: Ia64
+Using the Nasm syntax..
+
+Wait a few seconds, rp++ is looking for gadgets..
+in LOAD
+79 found.
+
+A total of 79 gadgets found.
+You decided to keep only the unique ones, 48 unique gadgets found.
+[91m0x004010d9[0m: [92madd ah, dh ; nop dword [rax+rax+0x00] ; ret  ;  (1 found)
+[0m[91m0x004013ea[0m: [92madd byte [rax], al ; add cl, cl ; ret  ;  (1 found)
+[0m[91m0x004013eb[0m: [92madd byte [rax], al ; leave  ; ret  ;  (1 found)
+[0m[91m0x004010de[0m: [92madd byte [rax], al ; ret  ;  (2 found)
+[0m[91m0x004010dd[0m: [92madd byte [rax], r8L ; ret  ;  (2 found)
+[0m[91m0x00401177[0m: [92madd byte [rcx], al ; pop rbp ; ret  ;  (1 found)
+[0m[91m0x004013ec[0m: [92madd cl, cl ; ret  ;  (1 found)
+[0m[91m0x00401178[0m: [92madd dword [rbp-0x3D], ebx ; nop dword [rax+rax+0x00] ; ret  ;  (1 found)
+[0m[91m0x00401013[0m: [92madd esp, 0x08 ; ret  ;  (2 found)
+[0m[91m0x00401012[0m: [92madd rsp, 0x08 ; ret  ;  (2 found)
+[0m[91m0x004015a1[0m: [92mcall qword [r15+rbx*8] ;  (1 found)
+[0m[91m0x00401433[0m: [92mcall qword [rax+0x4855C35D] ;  (2 found)
+[0m[91m0x004015a2[0m: [92mcall qword [rdi+rbx*8] ;  (1 found)
+[0m[91m0x00401010[0m: [92mcall rax ;  (1 found)
+[0m[91m0x004014e7[0m: [92mclc  ; leave  ; ret  ;  (2 found)
+[0m[91m0x00401555[0m: [92mcld  ; leave  ; ret  ;  (2 found)
+[0m[91m0x004015a4[0m: [92mfisttp word [rax-0x7D] ; ret  ;  (1 found)
+[0m[91m0x004010da[0m: [92mhlt  ; nop dword [rax+rax+0x00] ; ret  ;  (1 found)
+[0m[91m0x0040110c[0m: [92mjmp rax ;  (2 found)
+[0m[91m0x004013ed[0m: [92mleave  ; ret  ;  (3 found)
+[0m[91m0x00401172[0m: [92mmov byte [0x00000000004040A8], 0x00000001 ; pop rbp ; ret  ;  (1 found)
+[0m[91m0x004013e8[0m: [92mmov eax, 0x00000000 ; leave  ; ret  ;  (1 found)
+[0m[91m0x00401554[0m: [92mmov eax, dword [rbp-0x04] ; leave  ; ret  ;  (1 found)
+[0m[91m0x004014e6[0m: [92mmov eax, dword [rbp-0x08] ; leave  ; ret  ;  (1 found)
+[0m[91m0x00401107[0m: [92mmov edi, 0x00404068 ; jmp rax ;  (2 found)
+[0m[91m0x0040159f[0m: [92mmov edi, esp ; call qword [r15+rbx*8] ;  (1 found)
+[0m[91m0x0040159e[0m: [92mmov edi, r12d ; call qword [r15+rbx*8] ;  (1 found)
+[0m[91m0x0040159c[0m: [92mmov esi, ebp ; mov edi, r12d ; call qword [r15+rbx*8] ;  (1 found)
+[0m[91m0x0040159a[0m: [92mmov rsi, r13 ; mov edi, r12d ; call qword [r15+rbx*8] ;  (2 found)
+[0m[91m0x00401434[0m: [92mnop  ; pop rbp ; ret  ;  (2 found)
+[0m[91m0x0040110e[0m: [92mnop  ; ret  ;  (2 found)
+[0m[91m0x004010db[0m: [92mnop dword [rax+rax+0x00] ; ret  ;  (2 found)
+[0m[91m0x004015bd[0m: [92mnop dword [rax] ; ret  ;  (1 found)
+[0m[91m0x00401106[0m: [92mor dword [rdi+0x00404068], edi ; jmp rax ;  (1 found)
+[0m[91m0x004015a0[0m: [92mout 0x41, eax ; call qword [rdi+rbx*8] ;  (1 found)
+[0m[91m0x0040159d[0m: [92mout dx, al ; mov edi, r12d ; call qword [r15+rbx*8] ;  (1 found)
+[0m[91m0x004015b8[0m: [92mpop r14 ; pop r15 ; ret  ;  (1 found)
+[0m[91m0x004015ba[0m: [92mpop r15 ; ret  ;  (1 found)
+[0m[91m0x00401179[0m: [92mpop rbp ; ret  ;  (3 found)
+[0m[91m0x004015bb[0m: [92mpop rdi ; ret  ;  (1 found)
+[0m[91m0x004015b9[0m: [92mpop rsi ; pop r15 ; ret  ;  (1 found)
+[0m[91m0x00401016[0m: [92mret  ;  (15 found)
+[0m[91m0x00401253[0m: [92mretn 0x000D ;  (1 found)
+[0m[91m0x00401072[0m: [92mretn 0x002F ;  (1 found)
+[0m[91m0x004012d2[0m: [92mretn 0x458B ;  (1 found)
+[0m[91m0x0040100d[0m: [92msal byte [rdx+rax-0x01], 0xFFFFFFD0 ; add rsp, 0x08 ; ret  ;  (1 found)
+[0m[91m0x004015c5[0m: [92msub esp, 0x08 ; add rsp, 0x08 ; ret  ;  (1 found)
+[0m[91m0x004015c4[0m: [92msub rsp, 0x08 ; add rsp, 0x08 ; ret  ;  (1 found)
+[0m

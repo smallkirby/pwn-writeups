@@ -1,0 +1,15 @@
+[!] FOUND!: flag
+[!] FOUND!: cat
+[!] FOUND!: win
+***** IN MEMORY ********
+[!] FOUND!: cat
+[!] FOUND!: cat
+[!] FOUND!: cat
+[!] FOUND!: win
+************************
+***** VULN FUNCS *******
+[!] FOUND!: read is called at 00011a58
+[!] FOUND!: read is called at 00011a6e
+[!] FOUND!: read is called at 00011b00
+[!] FOUND!: read is called at 00011b9a
+************************

@@ -1,0 +1,8 @@
+/*
+ Quantcast measurement tag
+ Copyright (c) 2008-2017, Quantcast Corp.
+*/
+(function(g,l,h){var m="twitter:title og:title title author authors article:author article:authors bt:author bt:authors sailthru.author sailthru.authors sailthru.title lv:author lv:authors lv:title".split(" "),n=function(b){return b.replace(/^[\s\ufeff\xA0]+|[\s\ufeff\xA0]+$/g,"")},p=function(b){return{}.toString.call(b).match(/\s([a-zA-Z]+)/)[1].toLowerCase()},r=function(b,c,d){return b?"nc"===b?!c||!d||0>c.indexOf(d):"eq"===b?c===d:"sw"===b?0===c.indexOf(d):"ew"===b?(b=c.length-d.length,c=c.lastIndexOf(d,
+b),-1!==c&&c===b):"c"===b?0<=c.indexOf(d):!1:!1},k=function(b,c,d){var a;if(l.top===l.self)a=h.location.href;else{a=h.referrer;var e=h.createElement("a");e.href=a;a=e.href}r(c,a,d)?b(a):b(!1)},f=function(b){return{labels:b}},q=function(b){return"array"===p(b)?f(b.join(",")):f(""+b)};__qc.apply(null,["rules",[g,null,[[q,"Categories.Newest"]],[[k,"c","deviantart.com/newest/"]]],[g,null,[[function(b,c){var d=[],a;if("array"===p(c)){for(a=0;a<c.length;a++)d.push(b+"."+c[a]);return f(d.join(","))}return f(b+
+"."+c)},"Campaign.Gigantic"]],[[function(b,c,d){c=document.getElementsByTagName("meta");for(var a,e,f=0;f<c.length;f++)if(a=c[f],e=a.getAttribute("name")||a.getAttribute("property"),e==d){c=a.getAttribute("content");a=e=a=void 0;b:{a=void 0;for(a=0;a<m.length;a++)if(m[a]===d){a=!1;break b}a=!0}if(c)if(a){e=c.split(",");for(a=0;a<e.length;a++)e[a]=n(e[a]);d=e}else d=n(c.replace(/,+/g," "));else d=c;b(d);return}b(!1)},"exactmatch","og:title"],[k,"c","go.deviantart.com/journal/Fan-Art-Feature-Gigantic-696578217"]]],
+[g,null,[[q,"Campaign.Fan Art Feature Gigantic"]],[[k,"c","/journal/Fan-Art-Feature-Gigantic-696578217"]]]])})("p-915Y6SMHQQJHI",window,document);
