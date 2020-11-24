@@ -1,0 +1,22 @@
+# no-eeeeeeeeeeeeeeeeeemoji
+
+## horse()
+markerが0の場合には即return
+mmapaddrから0x1000に'A'をmemset()
+そのアドレスに、read(0,mmapaddr,0x1000)だけ読み込み
+また、
+- mmapaddr+0x400に0xb8だけfunc1を入れる
+- mmapaddr+0x100に0x100だけ'A'を入れる
+- mmapaddr+0x202に0xFEだけ'A'を入れる
+- mmapaddr+0x202に0x3Eだけhorse()を入れる
+mmapaddr+0x400からのプログラムを実行
+
+
+## cow()
+なんこれ
+
+## beer()
+seed0のrand()アドレスにmmapし、markerを1に。
+そのアドレスは教えてくれる。
+まぁほぼ任意のアドレスにあてられるのかな。
+
