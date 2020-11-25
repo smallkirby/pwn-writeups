@@ -1,0 +1,8 @@
+FLAG{netcat-1s-sw1ss-4rmy-kn1fe}
+FLAG{1ets-1earn-stack-w1th-b0f-var1ab1e-rewr1te}
+FLAG{cAn-f1nd-str1ng-us1ng-str1ngs}
+FLAG{1earning-how-return-address-w0rks-on-st4ck}
+FLAG{we-c4n-f1y-with-gl0b41-0ffset-tab1e}
+FLAG{learning-rop-and-x64-system-call}
+FLAG{mem0ry-1eak-4nd-0ne-gadget-rem0te-ce}
+FLAG{I-am-a-heap-beginner}
