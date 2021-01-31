@@ -1,0 +1,3 @@
+34,35d33
+< /* Shift (alsh) a tnum left (by a fixed min_shift) */
+< struct tnum tnum_alshift(struct tnum a, u8 min_shift, u8 insn_bitness);

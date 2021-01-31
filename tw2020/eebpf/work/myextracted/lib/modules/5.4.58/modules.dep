@@ -1,0 +1,4 @@
+kernel/fs/efivarfs/efivarfs.ko:
+kernel/crypto/crypto_engine.ko:
+kernel/drivers/thermal/intel/x86_pkg_temp_thermal.ko:
+kernel/drivers/crypto/virtio/virtio_crypto.ko: kernel/crypto/crypto_engine.ko

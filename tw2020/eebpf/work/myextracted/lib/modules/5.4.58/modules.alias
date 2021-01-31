@@ -1,0 +1,4 @@
+# Aliases extracted from modules themselves.
+alias fs-efivarfs efivarfs
+alias cpu:type:x86,ven0000fam*mod*:feature:*01C6* x86_pkg_temp_thermal
+alias virtio:d00000014v* virtio_crypto
