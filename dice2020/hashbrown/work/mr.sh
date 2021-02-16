@@ -6,7 +6,7 @@
 # build and compile exploit
 cwd=$(pwd)
 rm ./extracted/tmp/exploit
-gcc ./exploit.c -o ./exploit --static -g -O0 -masm=intel -pthread
+gcc ./exploit.c -o ./exploit --static -masm=intel -pthread 
 cp ./exploit ./extracted/tmp
 
 # compress filesystem
@@ -32,3 +32,10 @@ exec qemu-system-x86_64 \
     -smp cores=2 \
     -smp threads=1 \
     -s
+
+## send binary
+#gcc ./exploit.c -o ./exploit --static -masm=intel -pthread -no-pie -fno-PIE
+#strip ./exploit
+#gzip ./exploit --keep --force
+#base64 ./exploit.gz > ./exploit.gz.b64
+#python3 ./sender.py r
