@@ -1,0 +1,31 @@
+diff --git a/kernel/bpf/verifier.c b/kernel/bpf/verifier.c
+index 335c002..08dca71 100644
+--- a/kernel/bpf/verifier.c
++++ b/kernel/bpf/verifier.c
+@@ -352,7 +352,7 @@ static void print_bpf_insn(const struct bpf_verifier_env *env,
+ 			u64 imm = ((u64)(insn + 1)->imm << 32) | (u32)insn->imm;
+ 			bool map_ptr = insn->src_reg == BPF_PSEUDO_MAP_FD;
+ 
+-			if (map_ptr && !env->allow_ptr_leaks)
++			if (map_ptr && !capable(CAP_SYS_ADMIN))
+ 				imm = 0;
+ 
+ 			verbose("(%02x) r%d = 0x%llx\n", insn->code,
+@@ -3627,7 +3627,7 @@ int bpf_check(struct bpf_prog **prog, union bpf_attr *attr)
+ 	if (ret < 0)
+ 		goto skip_full_check;
+ 
+-	env->allow_ptr_leaks = capable(CAP_SYS_ADMIN);
++	env->allow_ptr_leaks = true;
+ 
+ 	ret = do_check(env);
+ 
+@@ -3731,7 +3731,7 @@ int bpf_analyzer(struct bpf_prog *prog, const struct bpf_ext_analyzer_ops *ops,
+ 	if (ret < 0)
+ 		goto skip_full_check;
+ 
+-	env->allow_ptr_leaks = capable(CAP_SYS_ADMIN);
++	env->allow_ptr_leaks = true;
+ 
+ 	ret = do_check(env);
+ 
