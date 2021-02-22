@@ -1,2 +1,0 @@
-27d26
-< #define BPF_ALSH	0xe0	/* sign extending arithmetic shift left */
