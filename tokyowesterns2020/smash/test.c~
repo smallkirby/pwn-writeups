@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+//#define DEBUG
+#ifdef DEBUG
+#define dbg(...) fprintf(stderr, __VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+int main(void) {
+    int *v = malloc(8);
+    int b = 10;
+    printf("%llu %llu\n", malloc_usable_size(v), malloc_usable_size(&b));
+    return 0;
+}

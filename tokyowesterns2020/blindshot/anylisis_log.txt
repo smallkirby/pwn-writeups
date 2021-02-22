@@ -1,0 +1,149 @@
+2020-09-20 22:31:59 INFO  (LoggingInitialization) Using log config file: jar:file:/usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2020-09-20 22:31:59 INFO  (LoggingInitialization) Using log file: /home/wataru/Documents/ctf/tw2020/blindshot/anylisis_log.txt  
+2020-09-20 22:31:59 INFO  (Preferences) Loading user preferences: /home/wataru/.ghidra/.ghidra_9.1.2_PUBLIC/preferences  
+2020-09-20 22:31:59 INFO  (ClassSearcher) Class search complete (688 ms)  
+2020-09-20 22:31:59 INFO  (SSLContextInitializer) Initializing SSL Context  
+2020-09-20 22:31:59 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2020-09-20 22:31:59 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2020-09-20 22:31:59 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2020-09-20 22:31:59 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/wataru/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/Ghidra-Cpp-Class-Analyzer/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/gotools/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts  
+2020-09-20 22:31:59 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2020-09-20 22:31:59 INFO  (HeadlessAnalyzer) Creating project: /home/wataru/Documents/ctf/tw2020/blindshot/ghidra-blindshot  
+2020-09-20 22:31:59 INFO  (DefaultProject) Creating project: /home/wataru/Documents/ctf/tw2020/blindshot/ghidra-blindshot  
+2020-09-20 22:31:59 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2020-09-20 22:31:59 INFO  (HeadlessAnalyzer)      project: /home/wataru/Documents/ctf/tw2020/blindshot/ghidra-blindshot  
+2020-09-20 22:31:59 INFO  (HeadlessAnalyzer) IMPORTING: /home/wataru/Documents/ctf/tw2020/blindshot/./blindshot  
+2020-09-20 22:32:01 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .dynsym linked to string table section .dynstr  
+2020-09-20 22:32:01 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .symtab linked to string table section .strtab  
+2020-09-20 22:32:01 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2020-09-20 22:32:01 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.plt linked to symbol table section .dynsym affecting .got  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .data at 00104000 from file offset 12288  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .got at 00103f80 from file offset 12160  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .dynamic at 00103d90 from file offset 11664  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .fini_array at 00103d88 from file offset 11656  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .init_array at 00103d78 from file offset 11640  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .eh_frame at 00102078 from file offset 8312  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .eh_frame_hdr at 00102020 from file offset 8224  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .rodata at 00102000 from file offset 8192  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .fini at 001013d8 from file offset 5080  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .text at 00101140 from file offset 4416  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .plt.sec at 001010c0 from file offset 4288  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .plt.got at 001010b0 from file offset 4272  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .plt at 00101020 from file offset 4128  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .init at 00101000 from file offset 4096  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .rela.plt at 00100760 from file offset 1888  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .rela.dyn at 00100670 from file offset 1648  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .gnu.version_r at 00100630 from file offset 1584  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .gnu.version at 0010060e from file offset 1550  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .dynstr at 00100530 from file offset 1328  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .dynsym at 001003c8 from file offset 968  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .gnu.hash at 001003a0 from file offset 928  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .note.ABI-tag at 0010037c from file offset 892  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .note.gnu.build-id at 00100358 from file offset 856  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .note.gnu.property at 00100338 from file offset 824  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .interp at 00100318 from file offset 792  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_4.2 at 0010201f from file offset 8223  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_4.4 at 00102074 from file offset 8308  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_3.2 at 0010101b from file offset 4123  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_3.7 at 001013d5 from file offset 5077  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_2.1 at 00100000 from file offset 0  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_2.3 at 00100334 from file offset 820  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_2.7 at 0010039c from file offset 924  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_2.11 at 0010060d from file offset 1549  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block segment_2.13 at 0010062c from file offset 1580  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .shstrtab at OTHER:00000000 from file offset 14842  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .strtab at OTHER:00000000 from file offset 14144  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .symtab at OTHER:00000000 from file offset 12344  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block .comment at OTHER:00000000 from file offset 12304  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 00100334  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010039c  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010060d  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010062c  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010101b  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 001013d5  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010201f  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 00102074  
+2020-09-20 22:32:01 DEBUG (ElfProgramBuilder) Loading block _elfSectionHeaders at OTHER:00000000 from file offset 15128  
+2020-09-20 22:32:01 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "x86:LE:64:default" and cspec "gcc" for file: /home/wataru/Documents/ctf/tw2020/blindshot/./blindshot  
+2020-09-20 22:32:02 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /home/wataru/Documents/ctf/tw2020/blindshot/./blindshot  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .dynsym linked to string table section .dynstr  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .symtab linked to string table section .strtab  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.plt linked to symbol table section .dynsym affecting .got  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .dynsym linked to string table section .dynstr  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .symtab linked to string table section .strtab  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2020-09-20 22:32:02 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.plt linked to symbol table section .dynsym affecting .got  
+2020-09-20 22:32:02 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2020-09-20 22:32:02 DEBUG (CreateFunctionCmd) Creating external function symbol: _ITM_deregisterTMCloneTable  
+2020-09-20 22:32:02 DEBUG (CreateFunctionCmd) Creating external function symbol: _ITM_registerTMCloneTable  
+2020-09-20 22:32:02 DEBUG (CreateFunctionCmd) Creating external function symbol: __gmon_start__  
+2020-09-20 22:32:02 INFO  (PackedDatabaseCache) Packed database cache: /tmp/wataru-Ghidra/packed-db-cache  
+2020-09-20 22:32:02 DEBUG (PackedDatabaseCache) Using cached packed database: /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2020-09-20 22:32:03 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.353 secs
+    Apply Data Archives                        0.315 secs
+    Call Convention Identification             0.025 secs
+    Call-Fixup Installer                       0.004 secs
+    Create Address Tables                      0.005 secs
+    Create Function                            0.006 secs
+    DWARF                                      0.014 secs
+    Data Reference                             0.007 secs
+    Decompiler Switch Analysis                 0.072 secs
+    Decompiler Switch Analysis - One Time      0.077 secs
+    Demangler                                  0.007 secs
+    Disassemble Entry Points                   0.068 secs
+    ELF Scalar Operand References              0.003 secs
+    Embedded Media                             0.007 secs
+    External Entry References                  0.000 secs
+    Function ID                                0.029 secs
+    Function Start Search                      0.030 secs
+    Function Start Search After Code           0.001 secs
+    Function Start Search After Data           0.001 secs
+    GCC C++ Class Analyzer                     0.001 secs
+    GCC Exception Handlers                     0.039 secs
+    GCC RTTI Analyzer                          0.008 secs
+    Non-Returning Functions - Discovered       0.009 secs
+    Non-Returning Functions - Known            0.002 secs
+    Reference                                  0.014 secs
+    Shared Return Calls                        0.003 secs
+    Stack                                      0.028 secs
+    Subroutine References                      0.006 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.109 secs
+-----------------------------------------------------
+     Total Time   1 secs
+-----------------------------------------------------
+  
+2020-09-20 22:32:03 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /home/wataru/Documents/ctf/tw2020/blindshot/./blindshot  
+2020-09-20 22:32:03 INFO  (HeadlessAnalyzer) SCRIPT: /home/wataru/ghidra_scripts/preanalysis_headless.py  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105000, pcode error at 00105000: Unable to disassemble EXTERNAL block location: 00105000  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105008, pcode error at 00105008: Unable to disassemble EXTERNAL block location: 00105008  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105010, pcode error at 00105010: Unable to disassemble EXTERNAL block location: 00105010  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105018, pcode error at 00105018: Unable to disassemble EXTERNAL block location: 00105018  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105020, pcode error at 00105020: Unable to disassemble EXTERNAL block location: 00105020  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105028, pcode error at 00105028: Unable to disassemble EXTERNAL block location: 00105028  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105030, pcode error at 00105030: Unable to disassemble EXTERNAL block location: 00105030  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105038, pcode error at 00105038: Unable to disassemble EXTERNAL block location: 00105038  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105040, pcode error at 00105040: Unable to disassemble EXTERNAL block location: 00105040  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105048, pcode error at 00105048: Unable to disassemble EXTERNAL block location: 00105048  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105050, pcode error at 00105050: Unable to disassemble EXTERNAL block location: 00105050  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105058, pcode error at 00105058: Unable to disassemble EXTERNAL block location: 00105058  
+2020-09-20 22:32:05 WARN  (DecompileCallback) Decompiling 00105060, pcode error at 00105060: Unable to disassemble EXTERNAL block location: 00105060  
+2020-09-20 22:32:05 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /home/wataru/Documents/ctf/tw2020/blindshot/./blindshot  
+2020-09-20 22:32:05 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /home/wataru/Documents/ctf/tw2020/blindshot/./blindshot  
+2020-09-20 22:32:05 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /blindshot  

@@ -1,0 +1,558 @@
+2020-09-20 23:40:16 INFO  (LoggingInitialization) Using log config file: jar:file:/usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2020-09-20 23:40:16 INFO  (LoggingInitialization) Using log file: /home/wataru/Documents/ctf/tw2020/metal/anylisis_log.txt  
+2020-09-20 23:40:16 INFO  (Preferences) Loading user preferences: /home/wataru/.ghidra/.ghidra_9.1.2_PUBLIC/preferences  
+2020-09-20 23:40:17 INFO  (ClassSearcher) Class search complete (670 ms)  
+2020-09-20 23:40:17 INFO  (SSLContextInitializer) Initializing SSL Context  
+2020-09-20 23:40:17 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2020-09-20 23:40:17 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2020-09-20 23:40:17 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2020-09-20 23:40:17 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/wataru/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/Ghidra-Cpp-Class-Analyzer/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/gotools/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts  
+2020-09-20 23:40:17 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2020-09-20 23:40:17 INFO  (HeadlessAnalyzer) Creating project: /home/wataru/Documents/ctf/tw2020/metal/ghidra-metal  
+2020-09-20 23:40:17 INFO  (DefaultProject) Creating project: /home/wataru/Documents/ctf/tw2020/metal/ghidra-metal  
+2020-09-20 23:40:17 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2020-09-20 23:40:17 INFO  (HeadlessAnalyzer)      project: /home/wataru/Documents/ctf/tw2020/metal/ghidra-metal  
+2020-09-20 23:40:17 INFO  (HeadlessAnalyzer) IMPORTING: /home/wataru/Documents/ctf/tw2020/metal/./hw_x64.metal  
+2020-09-20 23:40:19 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .dynsym linked to string table section .dynstr  
+2020-09-20 23:40:19 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf symbol table section .symtab linked to string table section .strtab  
+2020-09-20 23:40:19 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2020-09-20 23:40:19 DEBUG (ElfHeader$$EnhancerByCGLIB$$d5f3e3a0) Elf relocation table section .rela.plt linked to symbol table section .dynsym affecting .got  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .data at 00113000 from file offset 73728  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .got at 00112e10 from file offset 73232  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .dynamic at 00112bf0 from file offset 72688  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .fini_array at 00112be8 from file offset 72680  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .init_array at 00112bd8 from file offset 72664  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .gcc_except_table at 00111220 from file offset 70176  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .eh_frame at 0010f5e8 from file offset 62952  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .eh_frame_hdr at 0010ef18 from file offset 61208  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .rodata at 0010e000 from file offset 57344  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .fini at 0010d458 from file offset 54360  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .text at 001086a0 from file offset 34464  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .plt.sec at 00108370 from file offset 33648  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .plt.got at 00108360 from file offset 33632  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .plt at 00108020 from file offset 32800  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .init at 00108000 from file offset 32768  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .rela.plt at 00106fd0 from file offset 28624  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .rela.dyn at 00106598 from file offset 26008  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .gnu.version_r at 001064e8 from file offset 25832  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .gnu.version at 00106274 from file offset 25204  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .dynstr at 00102910 from file offset 10512  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .dynsym at 00100bb8 from file offset 3000  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .gnu.hash at 001003a0 from file offset 928  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .note.ABI-tag at 0010037c from file offset 892  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .note.gnu.build-id at 00100358 from file offset 856  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .note.gnu.property at 00100338 from file offset 824  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .interp at 00100318 from file offset 792  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block segment_4.3 at 0010f5e4 from file offset 62948  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block segment_3.2 at 0010801b from file offset 32795  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block segment_3.7 at 0010d455 from file offset 54357  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block segment_2.1 at 00100000 from file offset 0  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block segment_2.3 at 00100334 from file offset 820  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block segment_2.7 at 0010039c from file offset 924  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block segment_2.12 at 001064e6 from file offset 25830  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .shstrtab at OTHER:00000000 from file offset 297798  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .strtab at OTHER:00000000 from file offset 281936  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .symtab at OTHER:00000000 from file offset 272816  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .debug_ranges at OTHER:00000000 from file offset 269481  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .debug_str at OTHER:00000000 from file offset 180853  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .debug_line at OTHER:00000000 from file offset 170521  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .debug_abbrev at OTHER:00000000 from file offset 166737  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .debug_info at OTHER:00000000 from file offset 77820  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .debug_aranges at OTHER:00000000 from file offset 74572  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block .comment at OTHER:00000000 from file offset 74536  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 00100334  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010039c  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 001064e6  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010801b  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010d455  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010f5e4  
+2020-09-20 23:40:19 DEBUG (ElfProgramBuilder) Loading block _elfSectionHeaders at OTHER:00000000 from file offset 298176  
+2020-09-20 23:40:19 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "x86:LE:64:default" and cspec "gcc" for file: /home/wataru/Documents/ctf/tw2020/metal/./hw_x64.metal  
+2020-09-20 23:40:20 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /home/wataru/Documents/ctf/tw2020/metal/./hw_x64.metal  
+2020-09-20 23:40:20 INFO  (DWARFProgram) Read DWARF debug string table, 88628 bytes.  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _M_data(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _M_local_data(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _S_copy_chars(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _S_copy_chars(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type basic_string(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type begin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type end(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rbegin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rend(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type resize(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator[](Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type at(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type front(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type back(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator+=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator+=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator+=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type append(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type append(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type append(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type append(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type append(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type erase(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type erase(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type replace(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rfind(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rfind(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rfind(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_first_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_first_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_first_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_last_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_last_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_last_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_first_not_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_first_not_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_first_not_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_last_not_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_last_not_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type find_last_not_of(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type compare(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type compare(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type compare(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type compare(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type compare(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _M_construct<charconst*>(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type exception_ptr(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type exception_ptr(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type exception_ptr(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type allocator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type allocate(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type initializer_list(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type Init(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type mersenne_twister_engine(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type random_device(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type random_device(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type abs(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type abs(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type abs(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type abs(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type abs(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type abs(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type acos(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type asin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type atan(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type atan2(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type cos(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type sin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type tan(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type cosh(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type sinh(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type tanh(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type exp(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type frexp(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type ldexp(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type log(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type log10(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type modf(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type pow(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type sqrt(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type ceil(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fabs(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type floor(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fmod(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fpclassify(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fpclassify(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isfinite(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isfinite(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isinf(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isinf(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isnan(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isnan(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isnormal(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isnormal(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type signbit(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type signbit(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isgreater(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isgreater(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isgreaterequal(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isgreaterequal(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isless(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isless(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type islessequal(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type islessequal(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type islessgreater(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type islessgreater(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isunordered(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type isunordered(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type acosh(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type asinh(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type atanh(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type cbrt(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type copysign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type erf(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type erfc(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type exp2(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type expm1(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fdim(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fma(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fmax(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type fmin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type hypot(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type ilogb(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type lgamma(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type llrint(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type llround(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type log1p(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type log2(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type logb(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type lrint(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type lround(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type nearbyint(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type nextafter(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type nexttoward(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type remainder(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type remquo(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rint(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type round(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type scalbln(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type scalbn(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type tgamma(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type trunc(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type allocator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type allocate(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl_data(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _S_nothrow_relocate(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _S_do_relocate(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type begin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type end(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rbegin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rend(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type resize(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator[](Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type at(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type front(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type back(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type erase(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _M_erase(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _M_move_assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type initializer_list(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type istreambuf_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type istreambuf_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type istreambuf_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl_data(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_impl(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _Vector_base(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _S_nothrow_relocate(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _S_do_relocate(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type vector(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator=(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type begin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type end(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rbegin(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type rend(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type resize(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator[](Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type at(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type front(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type back(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type insert(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type erase(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _M_erase(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type _M_move_assign(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type move_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator--(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type move_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator--(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type __miter_base<char*>(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type __miter_base<unsignedchar*>(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type new_allocator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type address(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type __normal_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator--(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type __normal_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator--(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type new_allocator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type address(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type __normal_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator--(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type __normal_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:20 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator--(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type __normal_iterator(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator++(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type operator--(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type SamplerIndex(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type SamplerIndex(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type SurfaceIndex(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type SurfaceIndex(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type CreateSurface2D(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type CreateSurface2D(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type DestroySurface(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type DestroySurface(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:21 INFO  (DataTypeConflictHandler$1) Conflict with existing type CreateKernel(Function Signature Data Type), new type will be renamed with .conflict suffix  
+2020-09-20 23:40:22 INFO  (DWARFImportSummary) DWARF import - total elapsed: 1537ms  
+2020-09-20 23:40:22 INFO  (DWARFImportSummary) DWARF data type import - elapsed: 537ms  
+2020-09-20 23:40:22 INFO  (DWARFImportSummary) DWARF func & symbol import - elapsed: 332ms  
+2020-09-20 23:40:22 INFO  (DWARFImportSummary) DWARF types imported: 793  
+2020-09-20 23:40:22 INFO  (DWARFImportSummary) DWARF function signatures added: 1257  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209b14  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209b6b  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209b27  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209b56  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208985  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208a6a  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002089ee  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208a52  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208ba3  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208bd4  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208d0e  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209649  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208d21  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209634  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208d62  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020969a  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208f17  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020966a  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208f6a  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020969a  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002095d3  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209682  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209795  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209935  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002097f3  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209950  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209811  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002099b0  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209843  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209968  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209879  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209998  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002098b7  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209980  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209df0  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209e5d  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209e3e  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209e7b  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a0d5  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a0dc  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a2c5  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a2cc  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a38c  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a705  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a5f0  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a723  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a76b  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a7b0  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a932  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a939  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020acfa  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020adcd  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020ae19  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020ae3a  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020af10  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020af49  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020af61  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020af66  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c10c  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c1df  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c22b  
+2020-09-20 23:40:22 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c24c  
+2020-09-20 23:40:22 WARN  (DWARFAnalyzer) DWARF already imported, skipping.  (Detected DWARF program module)  
+2020-09-20 23:40:22 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2020-09-20 23:40:23 DEBUG (CreateFunctionCmd) Creating external function symbol: _ITM_deregisterTMCloneTable  
+2020-09-20 23:40:23 DEBUG (CreateFunctionCmd) Creating external function symbol: _ITM_registerTMCloneTable  
+2020-09-20 23:40:23 DEBUG (CreateFunctionCmd) Creating external function symbol: __gmon_start__  
+2020-09-20 23:40:23 INFO  (PackedDatabaseCache) Packed database cache: /tmp/wataru-Ghidra/packed-db-cache  
+2020-09-20 23:40:23 DEBUG (PackedDatabaseCache) Using cached packed database: /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2020-09-20 23:40:25 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.491 secs
+    Apply Data Archives                        0.267 secs
+    Call Convention Identification             0.024 secs
+    Call-Fixup Installer                       0.020 secs
+    Create Address Tables                      0.045 secs
+    Create Address Tables - One Time           0.048 secs
+    Create Function                            0.013 secs
+    DWARF                                      1.628 secs
+    Data Reference                             0.025 secs
+    Decompiler Switch Analysis                 0.100 secs
+    Decompiler Switch Analysis - One Time      0.063 secs
+    Demangler                                  0.058 secs
+    Disassemble Entry Points                   0.371 secs
+    ELF Scalar Operand References              0.041 secs
+    Embedded Media                             0.060 secs
+    External Entry References                  0.003 secs
+    Function ID                                0.164 secs
+    Function Start Search                      0.052 secs
+    Function Start Search After Code           0.007 secs
+    Function Start Search After Data           0.005 secs
+    GCC C++ Class Analyzer                     0.001 secs
+    GCC Exception Handlers                     0.242 secs
+    GCC RTTI Analyzer                          0.011 secs
+    Non-Returning Functions - Discovered       0.060 secs
+    Non-Returning Functions - Known            0.006 secs
+    Reference                                  0.078 secs
+    Shared Return Calls                        0.007 secs
+    Stack                                      0.531 secs
+    Subroutine References                      0.026 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            0.430 secs
+-----------------------------------------------------
+     Total Time   4 secs
+-----------------------------------------------------
+  
+2020-09-20 23:40:25 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /home/wataru/Documents/ctf/tw2020/metal/./hw_x64.metal  
+2020-09-20 23:40:25 INFO  (HeadlessAnalyzer) SCRIPT: /home/wataru/ghidra_scripts/preanalysis_headless.py  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114000, pcode error at 00114000: Unable to disassemble EXTERNAL block location: 00114000  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114008, pcode error at 00114008: Unable to disassemble EXTERNAL block location: 00114008  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114010, pcode error at 00114010: Unable to disassemble EXTERNAL block location: 00114010  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114018, pcode error at 00114018: Unable to disassemble EXTERNAL block location: 00114018  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114020, pcode error at 00114020: Unable to disassemble EXTERNAL block location: 00114020  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114028, pcode error at 00114028: Unable to disassemble EXTERNAL block location: 00114028  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114030, pcode error at 00114030: Unable to disassemble EXTERNAL block location: 00114030  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114038, pcode error at 00114038: Unable to disassemble EXTERNAL block location: 00114038  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114040, pcode error at 00114040: Unable to disassemble EXTERNAL block location: 00114040  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114048, pcode error at 00114048: Unable to disassemble EXTERNAL block location: 00114048  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114050, pcode error at 00114050: Unable to disassemble EXTERNAL block location: 00114050  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114058, pcode error at 00114058: Unable to disassemble EXTERNAL block location: 00114058  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114060, pcode error at 00114060: Unable to disassemble EXTERNAL block location: 00114060  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114068, pcode error at 00114068: Unable to disassemble EXTERNAL block location: 00114068  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114070, pcode error at 00114070: Unable to disassemble EXTERNAL block location: 00114070  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114078, pcode error at 00114078: Unable to disassemble EXTERNAL block location: 00114078  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114080, pcode error at 00114080: Unable to disassemble EXTERNAL block location: 00114080  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114088, pcode error at 00114088: Unable to disassemble EXTERNAL block location: 00114088  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114090, pcode error at 00114090: Unable to disassemble EXTERNAL block location: 00114090  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114098, pcode error at 00114098: Unable to disassemble EXTERNAL block location: 00114098  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140a0, pcode error at 001140a0: Unable to disassemble EXTERNAL block location: 001140a0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140a8, pcode error at 001140a8: Unable to disassemble EXTERNAL block location: 001140a8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140b0, pcode error at 001140b0: Unable to disassemble EXTERNAL block location: 001140b0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140b8, pcode error at 001140b8: Unable to disassemble EXTERNAL block location: 001140b8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140c0, pcode error at 001140c0: Unable to disassemble EXTERNAL block location: 001140c0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140c8, pcode error at 001140c8: Unable to disassemble EXTERNAL block location: 001140c8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140d0, pcode error at 001140d0: Unable to disassemble EXTERNAL block location: 001140d0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140d8, pcode error at 001140d8: Unable to disassemble EXTERNAL block location: 001140d8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140e0, pcode error at 001140e0: Unable to disassemble EXTERNAL block location: 001140e0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140e8, pcode error at 001140e8: Unable to disassemble EXTERNAL block location: 001140e8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001140f8, pcode error at 001140f8: Unable to disassemble EXTERNAL block location: 001140f8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114100, pcode error at 00114100: Unable to disassemble EXTERNAL block location: 00114100  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114108, pcode error at 00114108: Unable to disassemble EXTERNAL block location: 00114108  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114110, pcode error at 00114110: Unable to disassemble EXTERNAL block location: 00114110  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114118, pcode error at 00114118: Unable to disassemble EXTERNAL block location: 00114118  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114120, pcode error at 00114120: Unable to disassemble EXTERNAL block location: 00114120  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114128, pcode error at 00114128: Unable to disassemble EXTERNAL block location: 00114128  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114130, pcode error at 00114130: Unable to disassemble EXTERNAL block location: 00114130  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114138, pcode error at 00114138: Unable to disassemble EXTERNAL block location: 00114138  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114140, pcode error at 00114140: Unable to disassemble EXTERNAL block location: 00114140  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114148, pcode error at 00114148: Unable to disassemble EXTERNAL block location: 00114148  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114150, pcode error at 00114150: Unable to disassemble EXTERNAL block location: 00114150  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114158, pcode error at 00114158: Unable to disassemble EXTERNAL block location: 00114158  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114160, pcode error at 00114160: Unable to disassemble EXTERNAL block location: 00114160  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114168, pcode error at 00114168: Unable to disassemble EXTERNAL block location: 00114168  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114170, pcode error at 00114170: Unable to disassemble EXTERNAL block location: 00114170  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114178, pcode error at 00114178: Unable to disassemble EXTERNAL block location: 00114178  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114180, pcode error at 00114180: Unable to disassemble EXTERNAL block location: 00114180  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114188, pcode error at 00114188: Unable to disassemble EXTERNAL block location: 00114188  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114190, pcode error at 00114190: Unable to disassemble EXTERNAL block location: 00114190  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 00114198, pcode error at 00114198: Unable to disassemble EXTERNAL block location: 00114198  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001141a0, pcode error at 001141a0: Unable to disassemble EXTERNAL block location: 001141a0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001141a8, pcode error at 001141a8: Unable to disassemble EXTERNAL block location: 001141a8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001141b0, pcode error at 001141b0: Unable to disassemble EXTERNAL block location: 001141b0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001141b8, pcode error at 001141b8: Unable to disassemble EXTERNAL block location: 001141b8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001141c8, pcode error at 001141c8: Unable to disassemble EXTERNAL block location: 001141c8  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001141d0, pcode error at 001141d0: Unable to disassemble EXTERNAL block location: 001141d0  
+2020-09-20 23:40:28 WARN  (DecompileCallback) Decompiling 001141d8, pcode error at 001141d8: Unable to disassemble EXTERNAL block location: 001141d8  
+2020-09-20 23:40:28 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /home/wataru/Documents/ctf/tw2020/metal/./hw_x64.metal  
+2020-09-20 23:40:28 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /home/wataru/Documents/ctf/tw2020/metal/./hw_x64.metal  
+2020-09-20 23:40:28 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /hw_x64.metal  

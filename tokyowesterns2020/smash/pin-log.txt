@@ -1,0 +1,4 @@
+Pin: pin-3.15-98253-b56e429
+Copyright 2002-2019 Intel Corporation.
+A:  Source/pinvm/debugger-connection/debugger-connection.cpp: NotifyThreadsStopped: 1061: assertion failed: focus != PIN::INVALID_THREADID
+

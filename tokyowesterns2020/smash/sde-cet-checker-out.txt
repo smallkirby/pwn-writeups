@@ -1,0 +1,7 @@
+IMG: [vdso] Address: 0x7ffe31f0fa3b:0x7ffe31f0f000 added to the legacy images
+Syscall EMU: CET CONTROL STATUS: 0x000000003 0x7f52c7163000 0x000001000
+Syscall EMU: CET CONTROL LOCK
+Control flow ENDBRANCH error detected at IP: 0x0000558f40d8b14d INS:  push rbp
+     Last branch IP: 0x0000558f40d8b174 INS:  call rax
+
+# $eof

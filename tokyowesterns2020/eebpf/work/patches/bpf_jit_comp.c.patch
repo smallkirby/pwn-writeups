@@ -1,0 +1,12 @@
+612d611
+< 		case BPF_ALU | BPF_ALSH | BPF_K:
+616d614
+< 		case BPF_ALU64 | BPF_ALSH | BPF_K:
+626d623
+< 			case BPF_ALSH: b3 = 0xE0; break; /* hex(asm('sal rax, 1')[-1]) = 0xE0 */
+638d634
+< 		case BPF_ALU | BPF_ALSH | BPF_X:
+642d637
+< 		case BPF_ALU64 | BPF_ALSH | BPF_X:
+668d662
+< 			case BPF_ALSH: b3 = 0xE0; break; /* hex(asm('sal rax, 1')[-1]) = 0xE0 */

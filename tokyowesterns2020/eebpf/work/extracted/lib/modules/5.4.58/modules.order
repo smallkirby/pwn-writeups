@@ -1,0 +1,12 @@
+kernel/crypto/crypto_engine.ko
+kernel/crypto/aead.ko
+kernel/crypto/crypto_blkcipher.ko
+kernel/crypto/crypto_null.ko
+kernel/crypto/rng.ko
+kernel/drivers/char/hw_random/rng-core.ko
+kernel/drivers/char/hw_random/intel-rng.ko
+kernel/drivers/char/hw_random/amd-rng.ko
+kernel/drivers/char/hw_random/via-rng.ko
+kernel/drivers/char/hw_random/virtio-rng.ko
+kernel/drivers/thermal/intel/x86_pkg_temp_thermal.ko
+kernel/drivers/crypto/virtio/virtio_crypto.ko

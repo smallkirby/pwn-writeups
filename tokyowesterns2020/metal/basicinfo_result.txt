@@ -1,0 +1,9 @@
+** IN DECOMPILED CODE **
+sha256: df05ee18673955fb339afd8f06e11f4f1c080d1aa789cc88c6a0513c726df513
+compiler_spec: gcc
+import_api_count: 58
+language: x86:LE:64:default
+defined_data_count: 0
+name: hw_x64.metal
+function_count: 383
+************************

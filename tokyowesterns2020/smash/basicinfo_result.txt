@@ -1,0 +1,9 @@
+** IN DECOMPILED CODE **
+sha256: 348e756a03e6766578de054b223a0e084052e37964af6a0ad51957ab6c7be14d
+compiler_spec: gcc
+import_api_count: 12
+language: x86:LE:64:default
+defined_data_count: 0
+name: smash
+function_count: 39
+************************

@@ -1,0 +1,23 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:hwrng_register rng_core
+alias symbol:crypto_sha256_finup sha256_generic
+alias symbol:crypto_engine_exit crypto_engine
+alias symbol:crypto_finalize_akcipher_request crypto_engine
+alias symbol:crypto_engine_start crypto_engine
+alias symbol:hwrng_unregister rng_core
+alias symbol:crypto_finalize_aead_request crypto_engine
+alias symbol:devm_hwrng_unregister rng_core
+alias symbol:sha224_zero_message_hash sha256_generic
+alias symbol:crypto_transfer_ablkcipher_request_to_engine crypto_engine
+alias symbol:crypto_finalize_ablkcipher_request crypto_engine
+alias symbol:crypto_sha256_update sha256_generic
+alias symbol:crypto_engine_stop crypto_engine
+alias symbol:crypto_transfer_hash_request_to_engine crypto_engine
+alias symbol:crypto_transfer_skcipher_request_to_engine crypto_engine
+alias symbol:devm_hwrng_register rng_core
+alias symbol:crypto_finalize_skcipher_request crypto_engine
+alias symbol:crypto_transfer_aead_request_to_engine crypto_engine
+alias symbol:crypto_finalize_hash_request crypto_engine
+alias symbol:crypto_engine_alloc_init crypto_engine
+alias symbol:sha256_zero_message_hash sha256_generic
+alias symbol:crypto_transfer_akcipher_request_to_engine crypto_engine

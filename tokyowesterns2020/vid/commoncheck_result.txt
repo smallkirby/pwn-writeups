@@ -1,0 +1,13 @@
+[!] FOUND!: flag
+[!] FOUND!: cat
+[!] FOUND!: win
+***** IN MEMORY ********
+[!] FOUND!: cat
+[!] FOUND!: cat
+[!] FOUND!: cat
+[!] FOUND!: win
+[!] FOUND!: win
+[!] FOUND!: win
+************************
+***** VULN FUNCS *******
+************************

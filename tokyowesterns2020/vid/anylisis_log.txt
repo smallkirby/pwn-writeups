@@ -1,0 +1,890 @@
+2020-09-20 15:34:03 INFO  (LoggingInitialization) Using log config file: jar:file:/usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2020-09-20 15:34:03 INFO  (LoggingInitialization) Using log file: /home/wataru/Documents/ctf/tw2020/vid/anylisis_log.txt  
+2020-09-20 15:34:03 INFO  (Preferences) Loading user preferences: /home/wataru/.ghidra/.ghidra_9.1.2_PUBLIC/preferences  
+2020-09-20 15:34:04 INFO  (ClassSearcher) Class search complete (685 ms)  
+2020-09-20 15:34:04 INFO  (SSLContextInitializer) Initializing SSL Context  
+2020-09-20 15:34:04 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2020-09-20 15:34:04 INFO  (SecureRandomFactory) Random Number Generator initialization complete: NativePRNGNonBlocking  
+2020-09-20 15:34:04 INFO  (ApplicationTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2020-09-20 15:34:04 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    /home/wataru/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/Ghidra-Cpp-Class-Analyzer/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Extensions/gotools/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts  
+2020-09-20 15:34:04 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2020-09-20 15:34:04 INFO  (HeadlessAnalyzer) Creating project: /home/wataru/Documents/ctf/tw2020/vid/vid_ghidra  
+2020-09-20 15:34:04 INFO  (DefaultProject) Creating project: /home/wataru/Documents/ctf/tw2020/vid/vid_ghidra  
+2020-09-20 15:34:04 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2020-09-20 15:34:04 INFO  (HeadlessAnalyzer)      project: /home/wataru/Documents/ctf/tw2020/vid/vid_ghidra  
+2020-09-20 15:34:04 INFO  (HeadlessAnalyzer) IMPORTING: /home/wataru/Documents/ctf/tw2020/vid/./vid  
+2020-09-20 15:34:06 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf symbol table section .dynsym linked to string table section .dynstr  
+2020-09-20 15:34:06 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf symbol table section .symtab linked to string table section .strtab  
+2020-09-20 15:34:06 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2020-09-20 15:34:06 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf relocation table section .rela.plt linked to symbol table section .dynsym affecting .got  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .data at 0014f000 from file offset 319488  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .got at 0014eb98 from file offset 318360  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .dynamic at 0014e968 from file offset 317800  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .data.rel.ro at 0014e5e0 from file offset 316896  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .fini_array at 0014e5d8 from file offset 316888  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .init_array at 0014e5c8 from file offset 316872  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .gcc_except_table at 0014b910 from file offset 309520  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .eh_frame at 0013b270 from file offset 242288  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .eh_frame_hdr at 00137330 from file offset 226096  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .rodata at 00136000 from file offset 221184  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .fini at 00135268 from file offset 217704  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .text at 00106000 from file offset 24576  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .plt.sec at 00105820 from file offset 22560  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .plt.got at 00105810 from file offset 22544  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .plt at 00105020 from file offset 20512  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .init at 00105000 from file offset 20480  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .rela.plt at 001042e0 from file offset 17120  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .rela.dyn at 00102e40 from file offset 11840  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .gnu.version_r at 00102d00 from file offset 11520  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .gnu.version at 00102bc2 from file offset 11202  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .dynstr at 00101300 from file offset 4864  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .dynsym at 00100448 from file offset 1096  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .gnu.hash at 001003a0 from file offset 928  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .note.ABI-tag at 0010037c from file offset 892  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .note.gnu.build-id at 00100358 from file offset 856  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .note.gnu.property at 00100338 from file offset 824  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .interp at 00100318 from file offset 792  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_5.6 at 0014efe8 from file offset 319464  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_4.2 at 0013732f from file offset 226095  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_4.4 at 0013b26c from file offset 242284  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_3.2 at 0010501b from file offset 20507  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_3.7 at 00135265 from file offset 217701  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_2.1 at 00100000 from file offset 0  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_2.3 at 00100334 from file offset 820  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_2.7 at 0010039c from file offset 924  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_2.11 at 00102bc1 from file offset 11201  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block segment_2.13 at 00102cfc from file offset 11516  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .shstrtab at OTHER:00000000 from file offset 638867  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .strtab at OTHER:00000000 from file offset 386360  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .symtab at OTHER:00000000 from file offset 320600  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block .comment at OTHER:00000000 from file offset 320560  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 00100334  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010039c  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 00102bc1  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 00102cfc  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0010501b  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 00135265  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0013732f  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0013b26c  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Removing discardable alignment/filler segment at 0014efe8  
+2020-09-20 15:34:06 DEBUG (ElfProgramBuilder) Loading block _elfSectionHeaders at OTHER:00000000 from file offset 639184  
+2020-09-20 15:34:07 INFO  (HeadlessAnalyzer) REPORT: Import succeeded with language "x86:LE:64:default" and cspec "gcc" for file: /home/wataru/Documents/ctf/tw2020/vid/./vid  
+2020-09-20 15:34:08 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: /home/wataru/Documents/ctf/tw2020/vid/./vid  
+2020-09-20 15:34:08 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf symbol table section .dynsym linked to string table section .dynstr  
+2020-09-20 15:34:08 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf symbol table section .symtab linked to string table section .strtab  
+2020-09-20 15:34:08 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2020-09-20 15:34:08 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf relocation table section .rela.plt linked to symbol table section .dynsym affecting .got  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207f2c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207f4a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002061f4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206415  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206346  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002063eb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206355  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002063d6  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206390  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206400  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002064fd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206989  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002065f5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206962  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020663f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020691a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206658  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206902  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020668e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206962  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206748  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020694a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206761  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206932  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002067d0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206962  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206a51  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206fc1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206a77  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206f07  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206ad8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206fc1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206c6e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206f22  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206cd1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206f3a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206d1c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206f7c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206e3a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206f67  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206e65  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00206f52  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002074aa  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207547  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002074b9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207532  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020764b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020767a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207673  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207699  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002076c5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207752  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207726  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00207739  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208e56  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00208f20  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002091f4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209219  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209318  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020931f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209730  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020973b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209759  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209763  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002099b0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209b41  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209b94  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00209bb5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a16c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a18f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a382  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a389  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a881  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a95f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a9b2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020a9d3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020aa80  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020aa87  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020aec7  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020aece  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b1df  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b48a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b23d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b4ab  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b71f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b75f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b772  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020b77c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c03f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c0ee  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c088  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c103  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c335  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c3e1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c799  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c7e1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c7fb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020c805  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020ca47  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020cc0d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020ca71  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020cc73  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020ca95  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020cc46  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020cac2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020cc2b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020cfe7  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020cfee  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d0aa  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d0e4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d502  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d542  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d555  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d55f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d87d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d89f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d9c1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020d9c8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020db01  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020db60  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020db17  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020db4b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020df07  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020df66  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020df1d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020df51  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020dfd3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020dffd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e596  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e724  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e60a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e763  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e742  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e74c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e7ae  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e7cf  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e942  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020e949  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020ecd9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020ed96  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020fb29  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020fb51  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020fc0e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0020fc42  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00211cc1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00211cc8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00211f40  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021201f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00212073  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00212094  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00213750  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021375b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00213779  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00213783  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002145a1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021463a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021467b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00214680  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00215a11  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00215baf  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002160e3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002160fa  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216119  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021611e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216336  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002164c7  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021651a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021653b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216b96  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216ca8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216bb0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216c90  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216e46  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00216e93  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002174c3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002175d5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002174dd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002175bd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021766b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021777b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002176de  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021774c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00217865  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021788e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002178ea  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002178fd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00217920  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00217925  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00217c45  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00217df0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00217e4c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00217e6d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218089  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002180b1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021811b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218143  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002181e6  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021821a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002182de  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218312  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002183be  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021841a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002184bf  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021851b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002185c1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021861d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002186c3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021871f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002187be  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021881a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002188bf  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021891b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002189c1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218a1d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218ac3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218b1f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218cc0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218d1f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218dfb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218e5a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218f35  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00218f94  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021906f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002190ce  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021931c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219350  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219716  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219850  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219788  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219838  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021979a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219820  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219ae8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219c22  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219b5a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219c0a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219b6c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219bf2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219e46  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219f80  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219eb8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219f68  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219eca  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00219f50  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a1a4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a2de  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a216  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a2c6  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a228  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a2ae  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a4d2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a506  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a606  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021aa58  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a623  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021aa40  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a6d1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021aa16  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a6fd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021aa2b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021a8d6  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021aa40  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021afd9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b021  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b040  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b045  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b192  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b199  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b5f4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b661  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b642  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021b67f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021beb4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021bebb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c4d6  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c4fb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c5b8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c5ec  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c6c4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c6e9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c7ae  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c7d3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c898  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c8bd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c954  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021c979  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ca14  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ca39  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cad4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021caf9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cb94  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cbb9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cc72  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cc97  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cd60  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cd85  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ce4e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ce73  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cf3c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cf61  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021cfe8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021d0e3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021d006  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021d0cb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021d043  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021d104  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021d926  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021d94b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ddba  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021dddf  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e0fe  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e123  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e442  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e467  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e521  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e6fd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e635  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e6e5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e647  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e6cd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e7c3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e99f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e8d7  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e987  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e8e9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021e96f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ea65  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ec41  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021eb79  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ec29  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021eb8b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ec11  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ed07  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021eee3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ee1b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021eecb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021ee2d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021eeb3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021f07b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021f082  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021fbad  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021fd10  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021fea0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0021fea7  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00222d3d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00223043  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00223245  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022354b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022374d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00223a53  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00223c55  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00223f5b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00224126  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022414b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002242da  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022435b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022437a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022437f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002246b1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002246b8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00225396  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022539d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002259bd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002259f4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00225b71  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00225ba8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00226b44  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00226c23  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00226c77  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00226c98  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002272e5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002273d4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022769e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227774  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002276b9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022775b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002276d4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227742  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002277d2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002277e8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227a79  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227c49  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227b1c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227c34  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227bec  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227c49  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227e3e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227f2a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227e59  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227f11  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227e74  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227ef8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227f88  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00227f9e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022823b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022832a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002284da  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002285c6  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002284f5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002285ad  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228510  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228594  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228624  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022863a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002287fd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228a1f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002288f2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228a0a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002289c2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228a1f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228bce  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228cba  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228be9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228ca1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228c04  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228c88  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228d18  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228d2e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228e25  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228e6b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228f33  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00228fd3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022908e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002290a8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229193  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002291d9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002292a1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229341  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229441  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002294d5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022945b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002294bd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022946a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002294a8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022958f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002295d5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022969d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022973d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002297f8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229812  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002298c7  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022990d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002299d5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229a75  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229b45  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229bd9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229b5f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229bc1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229b6e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00229bac  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022a631  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022a6c1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022a702  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022a707  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022abd1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ac19  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ac33  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ac3d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022af82  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022af99  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022afb3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022afbd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c13f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c1ee  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c18a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c20c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c544  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c5b1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c592  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c5cf  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c664  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c6d1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c6b2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c6ef  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c784  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c7f1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c7d2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c80f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c8a4  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c911  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c8f2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c92f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022c9f5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ca5c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ca38  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ca7a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022cd28  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022cd95  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022cd76  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022cdb3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ceeb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022cf52  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022cf2e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022cf70  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d112  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d220  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d1ad  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d20b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d5bf  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d5c6  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d5e5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022d5ea  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022da4b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022da74  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022dad0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022dae3  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022db06  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022db0b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022e3ae  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022e3b5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ea65  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ea6c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022eb4d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ebbd  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022eb99  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ebdb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ed60  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ed67  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ee4c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ee53  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ef70  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022ef77  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f06e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f075  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f15b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f1cb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f1a7  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f1e9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f33e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f345  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f3ea  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f46a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f4de  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f55e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f832  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f905  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f951  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0022f972  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00230fa2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00230fa9  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00231322  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002313fc  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023144c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023146d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023193b  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00231a19  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00231a6c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00231a8d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00231bee  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00231bf5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00232059  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002320a1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002320c0  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002320c5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00232644  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00232662  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023267c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00232686  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002328ba  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002328d8  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002328f2  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002328fc  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002336e5  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002336ec  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023389a  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002338a1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00233908  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023390f  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023416e  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002341ae  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002341c1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002341cb  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00234855  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 0023489d  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002348bc  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 002348c1  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00234a04  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00234a4c  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00234a66  
+2020-09-20 15:34:10 ERROR (GccExceptionAnalyzer) Failed to disassemble at 00234a70  
+2020-09-20 15:34:13 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf symbol table section .dynsym linked to string table section .dynstr  
+2020-09-20 15:34:13 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf symbol table section .symtab linked to string table section .strtab  
+2020-09-20 15:34:13 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf relocation table section .rela.dyn linked to symbol table section .dynsym affecting PT_LOAD  
+2020-09-20 15:34:13 DEBUG (ElfHeader$$EnhancerByCGLIB$$e75b3dc) Elf relocation table section .rela.plt linked to symbol table section .dynsym affecting .got  
+2020-09-20 15:34:14 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2020-09-20 15:34:18 DEBUG (CreateFunctionCmd) Creating external function symbol: _ITM_deregisterTMCloneTable  
+2020-09-20 15:34:18 DEBUG (CreateFunctionCmd) Creating external function symbol: _ITM_registerTMCloneTable  
+2020-09-20 15:34:18 DEBUG (CreateFunctionCmd) Creating external function symbol: __gmon_start__  
+2020-09-20 15:34:19 INFO  (PackedDatabaseCache) Packed database cache: /tmp/wataru-Ghidra/packed-db-cache  
+2020-09-20 15:34:19 DEBUG (PackedDatabaseCache) Using cached packed database: /usr/local/ghidra_9.1.2_PUBLIC/Ghidra/Features/Base/data/typeinfo/generic/generic_clib_64.gdt  
+2020-09-20 15:34:24 INFO  (DataTypeConflictHandler$5) New type not added in favor of existing type type_info(PlaceHolder Class Structure)  
+2020-09-20 15:34:25 ERROR (TypeInfoFactory) Unknown Exception ghidra.program.model.data.InvalidDataTypeException: The TypeInfo at 0014f420 is not valid
+	at ghidra.app.cmd.data.rtti.gcc.typeinfo.FundamentalTypeInfoModel.getModel(FundamentalTypeInfoModel.java:34)
+	at ghidra.app.cmd.data.rtti.gcc.factory.TypeInfoFactory.getTypeInfo(TypeInfoFactory.java:108)
+	at ghidra.app.plugin.prototype.CppCodeAnalyzerPlugin.gcc.GccCppClassAnalyzer.getClassTypeInfoList(GccCppClassAnalyzer.java:48)
+	at ghidra.app.plugin.prototype.CppCodeAnalyzerPlugin.AbstractCppClassAnalyzer.added(AbstractCppClassAnalyzer.java:98)
+	at ghidra.app.plugin.core.analysis.AnalysisScheduler.runAnalyzer(AnalysisScheduler.java:185)
+	at ghidra.app.plugin.core.analysis.AnalysisTask.applyTo(AnalysisTask.java:39)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager$AnalysisTaskWrapper.run(AutoAnalysisManager.java:685)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:785)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:664)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:629)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1025)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileWithImport(HeadlessAnalyzer.java:1558)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithImport(HeadlessAnalyzer.java:1696)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithImport(HeadlessAnalyzer.java:1762)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:438)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:121)
+	at ghidra.GhidraLauncher.main(GhidraLauncher.java:79)
+ 
+2020-09-20 15:34:31 INFO  (AutoAnalysisManager) Demangle Symbol> Unable to demangle symbol: _ZN9__gnu_cxxmiIPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPS6_St6vectorIS6_SaIS6_EEEEDTmicldtfp_4baseEcldtfp0_4baseEERKNS_17__normal_iteratorIT_T1_EERKNSE_IT0_SG_EE. Message: Unexpected problem parsing decltype ((({parm#1}.base)())-(({parm#2}.base)())) __gnu_cxx::operator-<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > const&) from mangled string: _ZN9__gnu_cxxmiIPKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPS6_St6vectorIS6_SaIS6_EEEEDTmicldtfp_4baseEcldtfp0_4baseEERKNS_17__normal_iteratorIT_T1_EERKNSE_IT0_SG_EE
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail16_Backref_matcherIN9__gnu_cxx17__normal_iteratorIPKcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEENS5_12regex_traitsIcEEE8_M_applyESB_SB_SB_SB_ENKUlccE_clEcc. Message: Unexpected problem parsing std::__detail::_Backref_matcher<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::regex_traits<char> >::_M_apply(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >)::{lambda(char, char)#1}::operator()(char, char) const from mangled string: _ZZNSt8__detail16_Backref_matcherIN9__gnu_cxx17__normal_iteratorIPKcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEENS5_12regex_traitsIcEEE8_M_applyESB_SB_SB_SB_ENKUlccE_clEcc
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<false, false>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, false, false>&)::{lambda(char)#1}::operator()(char) const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<false, false>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, false, false>&)::{lambda()#2}::operator()() const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<false, true>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, false, true>&)::{lambda(char)#1}::operator()(char) const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<false, true>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, false, true>&)::{lambda()#2}::operator()() const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb0ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<true, false>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, true, false>&)::{lambda(char)#1}::operator()(char) const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<true, false>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, true, false>&)::{lambda()#2}::operator()() const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb0EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<true, true>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, true, true>&)::{lambda(char)#1}::operator()(char) const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlcE_clEc
+Demangle Symbol> Unable to demangle symbol: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv. Message: Unexpected problem parsing bool std::__detail::_Compiler<std::__cxx11::regex_traits<char> >::_M_expression_term<true, true>(std::pair<bool, char>&, std::__detail::_BracketMatcher<std::__cxx11::regex_traits<char>, true, true>&)::{lambda()#2}::operator()() const from mangled string: _ZZNSt8__detail9_CompilerINSt7__cxx1112regex_traitsIcEEE18_M_expression_termILb1ELb1EEEbRSt4pairIbcERNS_15_BracketMatcherIS3_XT_EXT0_EEEENKUlvE0_clEv
+Demangle Symbol> Unable to demangle symbol: _ZSt12__miter_baseIPmEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E. Message: Unexpected problem parsing decltype (__miter_base(({parm#1}.base)())) std::__miter_base<unsigned long*>(std::move_iterator<unsigned long*>) from mangled string: _ZSt12__miter_baseIPmEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
+Demangle Symbol> Unable to demangle symbol: _ZSt12__miter_baseIPcEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E. Message: Unexpected problem parsing decltype (__miter_base(({parm#1}.base)())) std::__miter_base<char*>(std::move_iterator<char*>) from mangled string: _ZSt12__miter_baseIPcEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
+  
+2020-09-20 15:34:31 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              0.604 secs
+    Apply Data Archives                        0.312 secs
+    Call Convention Identification             3.665 secs
+    Call-Fixup Installer                       0.152 secs
+    Create Address Tables                      0.137 secs
+    Create Address Tables - One Time           0.097 secs
+    Create Function                            0.025 secs
+    DWARF                                      0.073 secs
+    Data Reference                             0.213 secs
+    Decompiler Switch Analysis                 0.238 secs
+    Decompiler Switch Analysis - One Time      0.181 secs
+    Demangler                                  1.549 secs
+    Disassemble Entry Points                   2.787 secs
+    ELF Scalar Operand References              0.405 secs
+    Embedded Media                             0.222 secs
+    External Entry References                  0.022 secs
+    Function ID                                0.743 secs
+    Function Start Search                      0.042 secs
+    Function Start Search After Code           0.035 secs
+    Function Start Search After Data           0.029 secs
+    GCC C++ Class Analyzer                     0.086 secs
+    GCC Exception Handlers                     2.023 secs
+    GCC RTTI Analyzer                          0.207 secs
+    Non-Returning Functions - Discovered       0.355 secs
+    Non-Returning Functions - Known            0.023 secs
+    Reference                                  0.302 secs
+    Shared Return Calls                        0.064 secs
+    Stack                                      5.525 secs
+    Subroutine References                      0.153 secs
+    Subroutine References - One Time           0.000 secs
+    x86 Constant Reference Analyzer            3.153 secs
+-----------------------------------------------------
+     Total Time   23 secs
+-----------------------------------------------------
+  
+2020-09-20 15:34:31 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: /home/wataru/Documents/ctf/tw2020/vid/./vid  
+2020-09-20 15:34:31 INFO  (HeadlessAnalyzer) SCRIPT: /home/wataru/ghidra_scripts/preanalysis_headless.py  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150000, pcode error at 00150000: Unable to disassemble EXTERNAL block location: 00150000  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150008, pcode error at 00150008: Unable to disassemble EXTERNAL block location: 00150008  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150010, pcode error at 00150010: Unable to disassemble EXTERNAL block location: 00150010  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150018, pcode error at 00150018: Unable to disassemble EXTERNAL block location: 00150018  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150020, pcode error at 00150020: Unable to disassemble EXTERNAL block location: 00150020  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150028, pcode error at 00150028: Unable to disassemble EXTERNAL block location: 00150028  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150030, pcode error at 00150030: Unable to disassemble EXTERNAL block location: 00150030  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150038, pcode error at 00150038: Unable to disassemble EXTERNAL block location: 00150038  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150040, pcode error at 00150040: Unable to disassemble EXTERNAL block location: 00150040  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150048, pcode error at 00150048: Unable to disassemble EXTERNAL block location: 00150048  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150050, pcode error at 00150050: Unable to disassemble EXTERNAL block location: 00150050  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150058, pcode error at 00150058: Unable to disassemble EXTERNAL block location: 00150058  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150060, pcode error at 00150060: Unable to disassemble EXTERNAL block location: 00150060  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150068, pcode error at 00150068: Unable to disassemble EXTERNAL block location: 00150068  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150070, pcode error at 00150070: Unable to disassemble EXTERNAL block location: 00150070  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150078, pcode error at 00150078: Unable to disassemble EXTERNAL block location: 00150078  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150080, pcode error at 00150080: Unable to disassemble EXTERNAL block location: 00150080  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150088, pcode error at 00150088: Unable to disassemble EXTERNAL block location: 00150088  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150090, pcode error at 00150090: Unable to disassemble EXTERNAL block location: 00150090  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150098, pcode error at 00150098: Unable to disassemble EXTERNAL block location: 00150098  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500a0, pcode error at 001500a0: Unable to disassemble EXTERNAL block location: 001500a0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500a8, pcode error at 001500a8: Unable to disassemble EXTERNAL block location: 001500a8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500b0, pcode error at 001500b0: Unable to disassemble EXTERNAL block location: 001500b0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500b8, pcode error at 001500b8: Unable to disassemble EXTERNAL block location: 001500b8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500c0, pcode error at 001500c0: Unable to disassemble EXTERNAL block location: 001500c0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500c8, pcode error at 001500c8: Unable to disassemble EXTERNAL block location: 001500c8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500d0, pcode error at 001500d0: Unable to disassemble EXTERNAL block location: 001500d0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500d8, pcode error at 001500d8: Unable to disassemble EXTERNAL block location: 001500d8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500e0, pcode error at 001500e0: Unable to disassemble EXTERNAL block location: 001500e0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500e8, pcode error at 001500e8: Unable to disassemble EXTERNAL block location: 001500e8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500f0, pcode error at 001500f0: Unable to disassemble EXTERNAL block location: 001500f0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001500f8, pcode error at 001500f8: Unable to disassemble EXTERNAL block location: 001500f8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150100, pcode error at 00150100: Unable to disassemble EXTERNAL block location: 00150100  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150108, pcode error at 00150108: Unable to disassemble EXTERNAL block location: 00150108  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150110, pcode error at 00150110: Unable to disassemble EXTERNAL block location: 00150110  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150118, pcode error at 00150118: Unable to disassemble EXTERNAL block location: 00150118  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150120, pcode error at 00150120: Unable to disassemble EXTERNAL block location: 00150120  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150128, pcode error at 00150128: Unable to disassemble EXTERNAL block location: 00150128  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150130, pcode error at 00150130: Unable to disassemble EXTERNAL block location: 00150130  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150138, pcode error at 00150138: Unable to disassemble EXTERNAL block location: 00150138  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150140, pcode error at 00150140: Unable to disassemble EXTERNAL block location: 00150140  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150148, pcode error at 00150148: Unable to disassemble EXTERNAL block location: 00150148  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150150, pcode error at 00150150: Unable to disassemble EXTERNAL block location: 00150150  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150158, pcode error at 00150158: Unable to disassemble EXTERNAL block location: 00150158  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150160, pcode error at 00150160: Unable to disassemble EXTERNAL block location: 00150160  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150168, pcode error at 00150168: Unable to disassemble EXTERNAL block location: 00150168  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150178, pcode error at 00150178: Unable to disassemble EXTERNAL block location: 00150178  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150180, pcode error at 00150180: Unable to disassemble EXTERNAL block location: 00150180  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150188, pcode error at 00150188: Unable to disassemble EXTERNAL block location: 00150188  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150190, pcode error at 00150190: Unable to disassemble EXTERNAL block location: 00150190  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150198, pcode error at 00150198: Unable to disassemble EXTERNAL block location: 00150198  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501a0, pcode error at 001501a0: Unable to disassemble EXTERNAL block location: 001501a0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501a8, pcode error at 001501a8: Unable to disassemble EXTERNAL block location: 001501a8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501b0, pcode error at 001501b0: Unable to disassemble EXTERNAL block location: 001501b0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501b8, pcode error at 001501b8: Unable to disassemble EXTERNAL block location: 001501b8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501c0, pcode error at 001501c0: Unable to disassemble EXTERNAL block location: 001501c0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501c8, pcode error at 001501c8: Unable to disassemble EXTERNAL block location: 001501c8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501d0, pcode error at 001501d0: Unable to disassemble EXTERNAL block location: 001501d0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501d8, pcode error at 001501d8: Unable to disassemble EXTERNAL block location: 001501d8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501e8, pcode error at 001501e8: Unable to disassemble EXTERNAL block location: 001501e8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501f0, pcode error at 001501f0: Unable to disassemble EXTERNAL block location: 001501f0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001501f8, pcode error at 001501f8: Unable to disassemble EXTERNAL block location: 001501f8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150200, pcode error at 00150200: Unable to disassemble EXTERNAL block location: 00150200  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150208, pcode error at 00150208: Unable to disassemble EXTERNAL block location: 00150208  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150210, pcode error at 00150210: Unable to disassemble EXTERNAL block location: 00150210  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150218, pcode error at 00150218: Unable to disassemble EXTERNAL block location: 00150218  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150220, pcode error at 00150220: Unable to disassemble EXTERNAL block location: 00150220  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150228, pcode error at 00150228: Unable to disassemble EXTERNAL block location: 00150228  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150230, pcode error at 00150230: Unable to disassemble EXTERNAL block location: 00150230  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150238, pcode error at 00150238: Unable to disassemble EXTERNAL block location: 00150238  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150240, pcode error at 00150240: Unable to disassemble EXTERNAL block location: 00150240  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150248, pcode error at 00150248: Unable to disassemble EXTERNAL block location: 00150248  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150250, pcode error at 00150250: Unable to disassemble EXTERNAL block location: 00150250  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150258, pcode error at 00150258: Unable to disassemble EXTERNAL block location: 00150258  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150260, pcode error at 00150260: Unable to disassemble EXTERNAL block location: 00150260  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150268, pcode error at 00150268: Unable to disassemble EXTERNAL block location: 00150268  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150270, pcode error at 00150270: Unable to disassemble EXTERNAL block location: 00150270  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150278, pcode error at 00150278: Unable to disassemble EXTERNAL block location: 00150278  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150280, pcode error at 00150280: Unable to disassemble EXTERNAL block location: 00150280  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150288, pcode error at 00150288: Unable to disassemble EXTERNAL block location: 00150288  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150290, pcode error at 00150290: Unable to disassemble EXTERNAL block location: 00150290  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150298, pcode error at 00150298: Unable to disassemble EXTERNAL block location: 00150298  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502a0, pcode error at 001502a0: Unable to disassemble EXTERNAL block location: 001502a0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502a8, pcode error at 001502a8: Unable to disassemble EXTERNAL block location: 001502a8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502b0, pcode error at 001502b0: Unable to disassemble EXTERNAL block location: 001502b0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502b8, pcode error at 001502b8: Unable to disassemble EXTERNAL block location: 001502b8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502c0, pcode error at 001502c0: Unable to disassemble EXTERNAL block location: 001502c0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502c8, pcode error at 001502c8: Unable to disassemble EXTERNAL block location: 001502c8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502d0, pcode error at 001502d0: Unable to disassemble EXTERNAL block location: 001502d0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502d8, pcode error at 001502d8: Unable to disassemble EXTERNAL block location: 001502d8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502e0, pcode error at 001502e0: Unable to disassemble EXTERNAL block location: 001502e0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502f0, pcode error at 001502f0: Unable to disassemble EXTERNAL block location: 001502f0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001502f8, pcode error at 001502f8: Unable to disassemble EXTERNAL block location: 001502f8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150300, pcode error at 00150300: Unable to disassemble EXTERNAL block location: 00150300  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150308, pcode error at 00150308: Unable to disassemble EXTERNAL block location: 00150308  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150310, pcode error at 00150310: Unable to disassemble EXTERNAL block location: 00150310  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150318, pcode error at 00150318: Unable to disassemble EXTERNAL block location: 00150318  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150320, pcode error at 00150320: Unable to disassemble EXTERNAL block location: 00150320  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150328, pcode error at 00150328: Unable to disassemble EXTERNAL block location: 00150328  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150330, pcode error at 00150330: Unable to disassemble EXTERNAL block location: 00150330  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150338, pcode error at 00150338: Unable to disassemble EXTERNAL block location: 00150338  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150340, pcode error at 00150340: Unable to disassemble EXTERNAL block location: 00150340  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150348, pcode error at 00150348: Unable to disassemble EXTERNAL block location: 00150348  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150350, pcode error at 00150350: Unable to disassemble EXTERNAL block location: 00150350  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150358, pcode error at 00150358: Unable to disassemble EXTERNAL block location: 00150358  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150360, pcode error at 00150360: Unable to disassemble EXTERNAL block location: 00150360  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150368, pcode error at 00150368: Unable to disassemble EXTERNAL block location: 00150368  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150370, pcode error at 00150370: Unable to disassemble EXTERNAL block location: 00150370  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150378, pcode error at 00150378: Unable to disassemble EXTERNAL block location: 00150378  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150380, pcode error at 00150380: Unable to disassemble EXTERNAL block location: 00150380  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150388, pcode error at 00150388: Unable to disassemble EXTERNAL block location: 00150388  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150390, pcode error at 00150390: Unable to disassemble EXTERNAL block location: 00150390  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150398, pcode error at 00150398: Unable to disassemble EXTERNAL block location: 00150398  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503a0, pcode error at 001503a0: Unable to disassemble EXTERNAL block location: 001503a0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503a8, pcode error at 001503a8: Unable to disassemble EXTERNAL block location: 001503a8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503b0, pcode error at 001503b0: Unable to disassemble EXTERNAL block location: 001503b0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503b8, pcode error at 001503b8: Unable to disassemble EXTERNAL block location: 001503b8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503c0, pcode error at 001503c0: Unable to disassemble EXTERNAL block location: 001503c0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503c8, pcode error at 001503c8: Unable to disassemble EXTERNAL block location: 001503c8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503d0, pcode error at 001503d0: Unable to disassemble EXTERNAL block location: 001503d0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503d8, pcode error at 001503d8: Unable to disassemble EXTERNAL block location: 001503d8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503e8, pcode error at 001503e8: Unable to disassemble EXTERNAL block location: 001503e8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503f0, pcode error at 001503f0: Unable to disassemble EXTERNAL block location: 001503f0  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 001503f8, pcode error at 001503f8: Unable to disassemble EXTERNAL block location: 001503f8  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150400, pcode error at 00150400: Unable to disassemble EXTERNAL block location: 00150400  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150408, pcode error at 00150408: Unable to disassemble EXTERNAL block location: 00150408  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150410, pcode error at 00150410: Unable to disassemble EXTERNAL block location: 00150410  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150418, pcode error at 00150418: Unable to disassemble EXTERNAL block location: 00150418  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150420, pcode error at 00150420: Unable to disassemble EXTERNAL block location: 00150420  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150428, pcode error at 00150428: Unable to disassemble EXTERNAL block location: 00150428  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150430, pcode error at 00150430: Unable to disassemble EXTERNAL block location: 00150430  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150438, pcode error at 00150438: Unable to disassemble EXTERNAL block location: 00150438  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150440, pcode error at 00150440: Unable to disassemble EXTERNAL block location: 00150440  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150448, pcode error at 00150448: Unable to disassemble EXTERNAL block location: 00150448  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150450, pcode error at 00150450: Unable to disassemble EXTERNAL block location: 00150450  
+2020-09-20 15:34:52 WARN  (DecompileCallback) Decompiling 00150458, pcode error at 00150458: Unable to disassemble EXTERNAL block location: 00150458  
+2020-09-20 15:34:53 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: /home/wataru/Documents/ctf/tw2020/vid/./vid  
+2020-09-20 15:34:53 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: /home/wataru/Documents/ctf/tw2020/vid/./vid  
+2020-09-20 15:34:53 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for file: /vid  

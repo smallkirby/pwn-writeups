@@ -1,0 +1,38 @@
+#!/bin/sh
+/bin/mount -t devtmpfs devtmpfs /dev
+chown root:tty /dev/console
+chown root:tty /dev/ptmx
+chown root:tty /dev/tty
+mkdir -p /dev/pts
+mount -vt devpts -o gid=4,mode=620 none /dev/pts
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+
+echo 2 > /proc/sys/kernel/kptr_restrict
+echo 1 > /proc/sys/kernel/dmesg_restrict
+#echo 0 > /proc/sys/kernel/kptr_restrict
+#echo 0 > /proc/sys/kernel/dmesg_restrict
+
+ifup eth0 > /dev/null 2>/dev/null
+
+insmod gnote.ko
+
+echo " ________  ________   ________  _________  _______ 
+|\   ____\|\   ___  \|\   __  \|\___   ___\\  ___ \     
+\ \  \___|\ \  \\ \  \ \  \|\  \|___ \  \_\ \   __/|    
+ \ \  \  __\ \  \\ \  \ \  \\\  \   \ \  \ \ \  \_|/__  
+  \ \  \|\  \ \  \\ \  \ \  \\\  \   \ \  \ \ \  \_|\ \ 
+   \ \_______\ \__\\ \__\ \_______\   \ \__\ \ \_______\ 
+    \|_______|\|__| \|__|\|_______|    \|__|  \|_______|
+    
+    
+    "
+
+#sh
+setsid cttyhack setuidgid 1000 sh
+
+umount /proc
+umount /sys
+
+poweroff -d 1 -n -f
