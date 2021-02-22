@@ -1,5 +1,0 @@
-#!/usr/bin/gdb -x
-#source ~/peda/peda.py
-add-auto-load-safe-path ./
-symbol ./vmlinux
-target remote localhost:12300
