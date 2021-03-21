@@ -1,0 +1,51 @@
+#!/bin/sh
+
+
+mount -t tmpfs none /tmp
+mount -t devtmpfs none /dev
+mount -t proc none /proc
+mount -t sysfs none /sys
+
+/sbin/mdev -s
+
+#echo 2 > /proc/sys/kernel/kptr_restrict
+#echo 1 > /proc/sys/kernel/dmesg_restrict
+echo 0 > /proc/sys/kernel/kptr_restrict
+echo 0 > /proc/sys/kernel/dmesg_restrict
+
+insmod /pprofile.ko
+chmod a+r /dev/pprofile
+
+chown root.root /root/*
+chmod 440 /root/*
+chmod 700 /root
+
+chown root.root /
+chown root.root /*
+chown root.root /home/pprofile/.profile
+
+chown -R root.root /bin
+chown -R root.root /etc
+chown -R root.root /sbin
+chown -R root.root /usr
+
+
+HOME=/home/pprofile
+ENV=$HOME/.profile; export ENV
+
+cat <<!
+
+Boot took $(cut -d' ' -f1 /proc/uptime) seconds
+
+!
+
+#setsid cttyhack setuidgid 1000 /bin/sh
+setsid cttyhack setuidgid 0 /bin/sh
+
+umount /dev
+umount /proc
+umount /sys
+umount /tmp
+
+poweroff -f
+
