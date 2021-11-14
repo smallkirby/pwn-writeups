@@ -1,0 +1,22 @@
+/ # cat /proc/kallsyms | grep module_llseek
+0xffffffffc0000000 t module_llseek        [sknote]
+0xffffffffc0000050 t module_write [sknote]
+0xffffffffc00001a0 t module_read  [sknote]
+0xffffffffc00000e0 t module_close [sknote]
+
+0xffffffff8126b950 T _copy_from_user
+
+0xffffffffc0002400 sknote
+
+0xffffffff8116e1a0 single_start
+
+0xffffffff8113d530 T kfree
+
+
+0xffffffff810709f0 pkc
+0xffffffff81070860 T commit_creds
+0xffffffff81000000 T _text
+
+0xffffffff81064e20 T call_usermodehelper_setup
+
+0xffffffff81e367c0 modprobe_path
