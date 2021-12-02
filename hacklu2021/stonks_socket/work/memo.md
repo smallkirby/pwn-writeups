@@ -1,0 +1,101 @@
+0xffffffffb37beec0 single_show
+
+0xffffffff819a4740 t ____sys_sendmsg
+0xffffffff819a8ab0 sock_kmalloc
+
+0xffffffffc0003064 r .LC0 [stonks_socket]
+0xffffffffc0002110 t stonks_rocket        [stonks_socket]
+0xffffffffc0004040 d __this_module        [stonks_socket]
+0xffffffffc00023a0 t cleanup_module       [stonks_socket]
+0xffffffffc00023a0 t stinks_socket        [stonks_socket]
+0xffffffffc0002000 t null_hash    [stonks_socket]
+0xffffffffc0002180 t stonks_ioctl [stonks_socket]
+0xffffffffc0002010 t secure_hash  [stonks_socket]
+
+0xffffffff810ce760 T commit_creds
+0xffffffff810cec60 T prepare_kernel_cred
+0xffffffff81000000 T _text
+
+
+0x0000000000402b72 in ?? ()
+(gdb) x/60gx $rsp
+0xffffc9000066fcc8:     0xffffc9000066fd80      0xffffffffc000234d
+0xffffc9000066fcd8:     0xffff888007818a40      0x0000000000000000
+0xffffc9000066fce8:     0xffffc9000066fd10      0xffffffff81107bab
+0xffffc9000066fcf8:     0xffff888000402b6a      0x0000000000402b6a
+0xffffc9000066fd08:     0xddb9c75f62683e31      0x0000000000000004
+0xffffc9000066fd18:     0x0000000000000008      0x00000000000000f8
+0xffffc9000066fd28:     0xffffc9000066fe00      0x0000000000000001
+0xffffc9000066fd38:     0xffffc90000000005      0x0000000000000000
+0xffffc9000066fd48:     0x0000000000000008      0xffffc9000066fe00
+0xffffc9000066fd58:     0x00000000000000f8      0x96e7094108234e00
+0xffffc9000066fd68:     0xffffc9000066fe10      0xffffc9000066fe10
+0xffffc9000066fd78:     0xffff8880046a4680      0xffffc9000066fdc0
+0xffffc9000066fd88:     0xffffffff81ab003c      0xffffffff814b4a1d
+0xffffc9000066fd98:     0xffff8880046a4680      0xffffc9000066fe10
+0xffffc9000066fda8:     0x00000000046a4680      0x96e7094108234e00
+0xffffc9000066fdb8:     0xffff8880046a4680      0xffffc9000066fde8
+0xffffc9000066fdc8:     0xffffffff819a42a9      0x0000000000000000
+0xffffc9000066fdd8:     0x0000000000000000      0x0000000000000000
+0xffffc9000066fde8:     0xffffc9000066ff20      0xffffffff819a5b0e
+0xffffc9000066fdf8:     0x00000001fffffff7      0x0000000000562500
+0xffffc9000066fe08:     0x0000000000000100      0x0000000000000000
+0xffffc9000066fe18:     0xffffffff00000000      0x0000000000000004
+0xffffc9000066fe28:     0x0000000000000008      0x00000000000000f8
+0xffffc9000066fe38:     0xffffc9000066fe00      0x0000000000000001
+0xffffc9000066fe48:     0x0000000000000000      0x0000000000000001
+0xffffc9000066fe58:     0x0000000000000000      0xffffffff00000000
+0xffffc9000066fe68:     0x0000000000000000      0x0000000000000000
+0xffffc9000066fe78:     0x0000000000000000      0x0000000272666aaf
+0xffffc9000066fe88:     0x000000027265a75f      0xffffffff8113fc90
+0xffffc9000066fe98:     0xffff88800781f240      0x0000000000000000
+
+(gdb) x/60gx $rsp
+0xffffc9000066fcc8:     0xffffc9000066fd80      0xffffffffc000234d
+0xffffc9000066fcd8:     0xffff888007818a40      0x0000000000000000
+0xffffc9000066fce8:     0xffffc9000066fd10      0xffffffff81107bab
+0xffffc9000066fcf8:     0xffff888000402b6a      0x0000000000402b6a
+0xffffc9000066fd08:     0x3db0c75f62683e71      0x0000000000000004
+0xffffc9000066fd18:     0x0000000000000008      0x00000000000000f8
+0xffffc9000066fd28:     0xffffc9000066fe00      0x0000000000000001
+0xffffc9000066fd38:     0xffffc90000000005      0x0000000000000000
+0xffffc9000066fd48:     0x0000000000000008      0xffffc9000066fe00
+0xffffc9000066fd58:     0x00000000000000f8      0x1c2069cd496be100
+0xffffc9000066fd68:     0xffffc9000066fe10      0xffffc9000066fe10
+0xffffc9000066fd78:     0xffff8880046a63c0      0xffffc9000066fdc0
+0xffffc9000066fd88:     0xffffffff81ab003c      0xffffffff814b4a1d
+0xffffc9000066fd98:     0xffff8880046a63c0      0xffffc9000066fe10
+0xffffc9000066fda8:     0x00000000046a63c0      0x1c2069cd496be100
+0xffffc9000066fdb8:     0xffff8880046a63c0      0xffffc9000066fde8
+0xffffc9000066fdc8:     0xffffffff819a42a9      0x0000000000000000
+0xffffc9000066fdd8:     0x0000000000000000      0x0000000000000000
+0xffffc9000066fde8:     0xffffc9000066ff20      0xffffffff819a5b0e
+0xffffc9000066fdf8:     0x00000001fffffff7      0x0000000000562500
+0xffffc9000066fe08:     0x0000000000000100      0x0000000000000000
+0xffffc9000066fe18:     0xffffffff00000000      0x0000000000000004
+0xffffc9000066fe28:     0x0000000000000008      0x00000000000000f8
+0xffffc9000066fe38:     0xffffc9000066fe00      0x0000000000000001
+0xffffc9000066fe48:     0x0000000000000000      0x0000000000000001
+0xffffc9000066fe58:     0x0000000000000000      0xffffffff00000000
+0xffffc9000066fe68:     0x0000000000000000      0x0000000000000000
+0xffffc9000066fe78:     0x0000000000000000      0x00000002cc382421
+0xffffc9000066fe88:     0x00000002cc3760d1      0xffffffff8113fc90
+0xffffc9000066fe98:     0xffff88800781f240      0x0000000000000000
+
+>>> text = 0xffffffff81000000
+>>> symbol = 0xffffffff81107bab
+>>> hex(symbol - text)
+'0x107bab'
+
+>>> prepare_kernel_cred = 0xffffffff810cec60
+>>> commit_creds = 0xffffffff810ce760
+>>> hex(prepare_kernel_cred - text)
+'0xcec60'
+>>> hex(commit_creds - text)
+'0xce760'
+
+>>> hex(symbol - prepare_kernel_cred)
+'0x38f4b'
+>>> hex(symbol - commit_creds)
+'0x3944b'
+

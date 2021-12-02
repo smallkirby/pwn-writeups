@@ -1,0 +1,17 @@
+[+] re-compressing filesystem...
+6924 blocks
+[+] starting QEMU...
+===============================
+Drothea v1.0.0
+[!] mmap_min_addr is smaller than 4096: 65536
+[!] Oops doesn't mean panic.
+\tyou mignt be able to leak info by invoking crash.
+[!] SMEP is disabled.
+[!] SMAP is disabled.
+[!] unprivileged ebpf installation is enabled.
+[?] KASLR seems enabled. Should turn off for debug purpose.
+[?] kptr seems restricted. Should try 'echo 0 > /proc/sys/kernel/kptr_restrict' in init script.
+Ingrid v1.0.0
+[.] userfaultfd is not disabled.
+[-] CONFIG_STRICT_DEVMEM is enabled.
+===============================

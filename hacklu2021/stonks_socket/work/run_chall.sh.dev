@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cp ./exploit ./FILE
+
+qemu-system-x86_64 \
+    -nographic \
+    -nodefaults \
+    -net none \
+    -monitor none \
+    -serial stdio \
+    -m 128 \
+    -drive format=raw,file=flag_disk,snapshot=on \
+    -drive format=raw,file=FILE,snapshot=on,index=2 \
+    -s \
+    -kernel vmlinuz-5.11.0-38-generic \
+    -initrd initramfs.cpio.gz \
+    -append "console=ttyS0 kaslr quiet"
