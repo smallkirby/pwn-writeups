@@ -1,0 +1,71 @@
+[+] starting exploit localy...
+c[?7l[2J[0mSeaBIOS (version 1.13.0-1ubuntu1.1)
+
+
+iPXE (http://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+03F8C8B0+03ECC8B0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM..c[?7l[2J[0m.Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: OK
+Saving random seed: OK
+Starting network: udhcpc: started, v1.34.1
+udhcpc: broadcasting discover
+udhcpc: broadcasting select for 10.0.2.15, server 10.0.2.2
+udhcpc: lease of 10.0.2.15 obtained from 10.0.2.2, lease time 86400
+deleting routers
+adding dns 10.0.2.3
+OK
+Starting dhcpcd...
+dhcpcd-9.4.1 starting
+DUID 00:01:00:01:29:48:a2:1e:52:54:00:12:34:56
+eth0: IAID 00:12:34:56
+eth0: soliciting an IPv6 router
+eth0: Router Advertisement from fe80::2
+eth0: adding address fec0::f9e0:d1e2:e3e0:c6a/64
+eth0: adding route to fec0::/64
+eth0: adding default route via fe80::2
+eth0: soliciting a DHCP lease
+eth0: offered 10.0.2.15 from 10.0.2.2
+eth0: leased 10.0.2.15 for 86400 seconds
+eth0: adding route to 10.0.2.0/24
+eth0: adding default route via 10.0.2.2
+forked to background, child pid 105
+
+Boot took 6.97 seconds
+
+[ kone_gadget - SECCON CTF 2021 ]
+/ $ ./exp/ $ ./exploit [J
+[+] start of exploit
+traps: PANIC: double fault, error_code: 0x0
+double fault: 0000 [#1] SMP PTI
+CPU: 0 PID: 154 Comm: exploit Not tainted 5.14.12 #4
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.13.0-1ubuntu1.1 04/01/2014
+RIP: 0010:0xffff888002293007
+Code: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 58 58 58 58 58 58 7b <73> 61 6d 70 6c 65 5f 66 6c 61 67 7d 0a 00 00 00 00 00 00 00 00 00
+RSP: 0018:0000000000000000 EFLAGS: 00000246
+RAX: ffff888002293007 RBX: 0000000000000000 RCX: 0000000000000000
+RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+RBP: 0000000000000000 R08: 0000000000000000 R09: 0000000000000000
+R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+FS:  00000000004e9300(0000) GS:ffff888003600000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: fffffffffffffff8 CR3: 0000000002fb0000 CR4: 00000000003006f0
+Call Trace:
+Modules linked in:
+---[ end trace 120e06da062e9e79 ]---
+RIP: 0010:0xffff888002293007
+Code: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 58 58 58 58 58 58 7b <73> 61 6d 70 6c 65 5f 66 6c 61 67 7d 0a 00 00 00 00 00 00 00 00 00
+RSP: 0018:0000000000000000 EFLAGS: 00000246
+RAX: ffff888002293007 RBX: 0000000000000000 RCX: 0000000000000000
+RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+RBP: 0000000000000000 R08: 0000000000000000 R09: 0000000000000000
+R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+FS:  00000000004e9300(0000) GS:ffff888003600000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: fffffffffffffff8 CR3: 0000000002fb0000 CR4: 00000000003006f0
+Kernel panic - not syncing: Fatal exception in interrupt
+Kernel Offset: disabled
