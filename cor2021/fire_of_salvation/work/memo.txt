@@ -1,0 +1,35 @@
+- FGKASLR is enabled.
+
+0xffffffffc00005f3 t process_rule [firewall]
+0xffffffffc0000020 t firewall_outbound_hook       [firewall]
+0xffffffffc0000000 t firewall_outbound_hook.cold  [firewall]
+0xffffffffc0000070 t firewall_inbound_hook        [firewall]
+0xffffffffc00005d9 t firewall_inbound_hook.cold   [firewall]
+0xffffffffc0000057 t kzalloc.constprop.0  [firewall]
+0xffffffffc00008a0 t firewall_ioctl       [firewall]
+0xffffffffc0002180 d firewall_lock        [firewall]
+0xffffffffc000014b t firewall_ioctl.cold  [firewall]
+0xffffffffc00009c0 t init_firewall        [firewall]
+0xffffffffc00024d0 b __key.0      [firewall]
+0xffffffffc00024e0 b firewall_device      [firewall]
+0xffffffffc0002080 d firewall_fops        [firewall]
+0xffffffffc00000a7 t init_firewall.cold   [firewall]
+0xffffffffc0002040 d in_hook      [firewall]
+0xffffffffc0002000 d out_hook     [firewall]
+0xffffffffc00007c9 t cleanup_firewall     [firewall]
+0xffffffffc00021c0 d __this_module        [firewall]
+0xffffffffc00007c9 t cleanup_module       [firewall]
+0xffffffffc00009c0 t init_module  [firewall]
+0xffffffffc00024c8 b firewall_rules_in    [firewall]
+0xffffffffc00024c0 b firewall_rules_out   [firewall]
+
+0xffffffff81c3d7a0 D init_ipc_ns
+0xffffffff81c33060 D init_cred
+0xffffffff81c124c0 D init_task
+
+0x0000000000016c00 A current_task
+0xffffffff81b48480 D __per_cpu_offset
+0xffffffff81b4ec20 r __ksymtab___per_cpu_offset
+0xffffffff81b65b84 r __kstrtab___per_cpu_offset
+0xffffffff81b71d71 r __kstrtabns___per_cpu_offset
+
