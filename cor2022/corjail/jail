@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo -e '[\033[5m\e[1;33m!\e[0m] Spawning a shell in a CoRJail...'
+echo 0 > /proc/sys/kernel/kptr_restrict
+for f in "ingrid" "drothea" "exploit"; do
+  cp /$f /home/user || echo "[!] $f not found, skipping"
+done
+chown -R user:user /home/user
+chmod -R 777 /home/user
+#bash
+
+#/usr/bin/docker run -it --user user --hostname CoRJail --security-opt seccomp=/etc/docker/corjail.json -v /proc/cormon:/proc_rw/cormon:rw corcontainer
+#/usr/bin/docker run -it --user root \
+/usr/bin/docker run -it --user user \
+  --hostname CoRJail \
+  --security-opt seccomp=/etc/docker/corjail.json \
+  --cap-add SYSLOG \
+  -v /proc/cormon:/proc_rw/cormon:rw \
+  -v /home/user/:/home/user/host \
+  corcontainer
+
+#/usr/sbin/poweroff -f
+
+#  --cap-add SYSLOG \
+
+
